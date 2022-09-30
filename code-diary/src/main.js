@@ -28,11 +28,14 @@ Vue.use(VBScrollspyPlugin)
 
 // This imports the dropdown and table plugins
 import { DropdownPlugin, TablePlugin } from 'bootstrap-vue'
+
+import vuetify from './plugins/vuetify'
 Vue.use(DropdownPlugin)
 Vue.use(TablePlugin)
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App),
+  vuetify,
+  render: h => h(App)
 }).$mount('#app')
