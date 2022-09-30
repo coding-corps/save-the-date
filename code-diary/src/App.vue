@@ -2,7 +2,6 @@
   <div class="container">
     <DiaryHeader :pages="links"></DiaryHeader>
   </div>
-  <hr>
 </template>
 <script>
 import DiaryHeader from './components/Header.vue'
