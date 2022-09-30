@@ -1,27 +1,19 @@
 <template>
-  <div class="container">
-    <DiaryHeader :pages="links"></DiaryHeader>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
+
 <script>
-import DiaryHeader from './components/Header.vue'
+import HelloWorld from './components/HelloWorld.vue'
+
 export default {
   name: 'App',
   components: {
-    DiaryHeader
-  },
-  data () {
-    return {
-  links:[
-    {name:"HQ", id:"Home", url:"#"},
-    {name:"Entries", id:"Home", url:"#"},
-    {name:"About_us", id:"About", url:"#"}
-  ]
+    HelloWorld
+  }
 }
-}
-}
- 
-
 </script>
 
 <style>
@@ -32,8 +24,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  background-color: #ffffff;
 }
-
-
 </style>
