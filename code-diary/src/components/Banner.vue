@@ -1,5 +1,7 @@
 <template class="neomorph">
   <div>
+
+    
     <b-carousel
       id="whatsHot"
       :v-model="slide"
@@ -17,9 +19,7 @@
       <b-carousel-slide style="vertical-align: middle; max-height: 300px;" v-if="p.hot" :caption="p.title" :img-src="require(`../assets/${p.img}`)">
         <p> {{p.summary}}
         </p>
-        <p class="lead mb-0">
-          <a :href="p.link" class="text-white fw-bold">Continue reading...</a>
-        </p>
+        <a class="porto-button" @click="scrollMeTo('porto')">Continue reading...</a>
       </b-carousel-slide>
       </div>
     </b-carousel>

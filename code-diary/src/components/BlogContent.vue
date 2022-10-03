@@ -1,16 +1,9 @@
 <template>
-    <div id="post">
-      <VueShowdown :markdown="this.fileContent ? this.fileContent:'# Not found'"></VueShowdown>
+    <div class="container">
+      <VueShowdown   flavor="github" class="text-justify" :markdown="doc ? require(`../assets/entrys/${doc}`).default :'# Not found'"></VueShowdown>
 </div>
   </template>
-  
   <script>
-import { templateElement } from '@babel/types';
-
-  
-
-
-
   export default {
     name: "BlogContent",
     props: ['doc'],
@@ -19,15 +12,18 @@ import { templateElement } from '@babel/types';
         fileToRender: null,
         fileContent: null,
         rawContent: null,
+        htmlContent: null
       };
     },
-    created: function() {
-      var Index = require(`../assets/entrys/test.md`);
-      templateElement.getElementById("post").innerHTML = "<h1> fuck</h1>"
-
-      console.log(Index)
-      this.fileContent = Index
-    },
-    methods: {}  
-  };
+   };
   </script>
+
+  <style>
+    pre {
+      background-color: rgb(54, 54, 54);
+      padding: 10px;
+      color: white;
+    }
+  </style>
+
+ 

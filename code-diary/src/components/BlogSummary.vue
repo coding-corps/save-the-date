@@ -35,8 +35,9 @@
         <div style=" text-align: center; margin: 80px;">
           <v-img size="50%" :src="require(`../assets/${img}`)"></v-img>
         </div>
-        <h2>start</h2>
         <blog-content :doc="doc"></blog-content>
+        <v-divider></v-divider>
+
       </v-card>
     </v-dialog>
   </v-row>

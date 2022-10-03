@@ -9,7 +9,7 @@
       <v-spacer>
         
       </v-spacer>
-      <v-toolbar-items  v-for='page in pages' :key='page.id' >
+      <v-toolbar-items  v-if="len(pages) > 0" v-for='page in pages' :key='page.id' >
         <v-btn :href="page.url" text>{{page.name}}</v-btn>
       </v-toolbar-items>
     </v-toolbar>

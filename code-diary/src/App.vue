@@ -35,6 +35,8 @@
       v-for="(item, i) in posts"
       :key="i"
       :color="item.color"
+      :id="item.id"
+      :ref="item.id"
       :icon="item.icon ? item.icon : 'mdi-head-plus-outline'"
       fill-dot
     >
@@ -69,6 +71,8 @@
 <!-- footer  -->
 
   </div>
+  <div ref="porto" class="fl-porto"></div>
+
   <DiaryFooter class="blog-footer">
 </DiaryFooter>
     </v-main>
@@ -81,6 +85,8 @@
   import BannerBar from './components/Banner.vue'
   import BlogPost from './components/BlogSummary.vue'
   import animatedHeader from './components/animatedHeader.vue'
+  import posts from './assets/entrys/data.json'
+
   export default {
     name: 'App',
     components: {
@@ -89,19 +95,24 @@
       animatedHeader,
       DiaryFooter
     },
+    created () {
+      this.posts = posts
+    },
+
     data () {
       return {
     links:[
       // {name:"About_us", id:"About", url:"#"}
     ],
-    posts:[
-    {id:"1", hot: true, img: "vue.jpeg", doc:"test.md", summary: "first post", title:"builing with vue", tags: ["vue"] , main:"test logiv", color: '#000000de',
-          icon: 'mdi-code-tags',},
-    {id:"2", hot: true, img: "971.jpg",doc:"test.md", summary: "old post", title:"builing with vue", tags: ["vue"], color: '#000000de'}
-    ],
+    posts: null,
   }
   }
+
   ,methods:{
+    scrollToAnchorPoint(refName) {
+            const el = this.$refs[refName]
+            el.scrollIntoView({ behavior: 'smooth'})
+        },
   getCool(id) {
     var rgb = this.getAverageRGB(document.getElementById(id));
     return 'rgb('+rgb.r+','+rgb.g+','+rgb.b+')';
