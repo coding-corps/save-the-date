@@ -1,32 +1,56 @@
-<template class="summary col-md-5" >
-  <div>
-    <div>
-        <div class="row g-0 overflow-hidden flex-md-row mb-4 h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <div v-for='t in tags' :key='t'>
-                 <b-badge  :pill="true" class=" tag approved">{{t}}</b-badge>
-                 </div>
-              <h3 class="mb-0">{{title}}</h3>
-              <div class="mb-1 text-muted">{{posted}}</div>
-              <p class="mb-auto">{{summary}}</p>
-              <a href="#" @click="modalShow = !modalShow" class="stretched-link">Continue reading</a>
-            </div>
-            <div class="col-auto d-none d-lg-block">
-              <img class="bd-placeholder-img"  width='200' height="200" :src="require(`../assets/${img}`)" alt="&lt;/&gt; Thumbnail">
-            </div>
-        </div>
-    </div>
-    <b-modal v-model="modalShow">{{main}}</b-modal>
-  </div>
+<template>
+  <v-row justify="center">
+    <v-dialog
+      v-model="dialog"
+      fullscreen
+      hide-overlay
+      transition="dialog-bottom-transition"
+    >
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          color="#000000de"
+          dark
+          v-bind="attrs"
+          v-on="on"
+        >
+          Read More?
+        </v-btn>
+      </template>
+      <v-card>
+        <v-toolbar
+          dark
+          color="primary"
+        >
+          <v-btn
+            icon
+            dark
+            @click="dialog = false"
+          >
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+          <v-toolbar-title></v-toolbar-title>
+          <v-spacer></v-spacer>
+          <h1>{{title}}</h1>
+        </v-toolbar>
+        <v-divider></v-divider>
+        <v-img :src="require(`../assets/${img}`)"></v-img>
+        <h2>start</h2>
+        <p>loren epsum n shiz </p>
+      </v-card>
+    </v-dialog>
+  </v-row>
 </template>
 
 <script>
   export default {
     name: 'BlogPost',
     props: ['post'],
-    data() {
+    data () {
       return {
-        modalShow: false,
+        dialog: false,
+        notifications: false,
+        sound: true,
+        widgets: false,
         main: this.post.main ? this.post.main : "",
         title: this.post.title ? this.post.title : "",
         posted: this.post.date ? this.post.date : "",
@@ -34,9 +58,10 @@
         img: this.post.img ? this.post.img : "",
         tags: this.post.tags ? this.post.tags : []
       }
-    }
+    },
   }
 </script>
+
 <style>
   :root {
   --tag-color-one: #58c2a9;

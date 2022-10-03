@@ -2,7 +2,7 @@
   <header class="b-header lh-1 py-3" style="background: white: important !important;">
     <nav class=" navbar navbar-expand-lg navbar-light  " style="background-color: white: important !important;">
       <div class="container" style="background: white: important !important;" >
-        <a class="logo-1 navbar-brand" href="#">
+        <a  style="margin: auto; width: 50%; padding: 10px;" href="#">
           <span><img style="max-height: 75px;" src="../assets/logo.svg" alt="&lt;/&gt;"></span>  coding_corps
         </a>
       </div>

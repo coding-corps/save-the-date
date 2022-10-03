@@ -11,7 +11,11 @@
     "bootstrap": "^5.2.1",
     "bootstrap-vue": "^2.22.0",
     "core-js": "^3.8.3",
+    "node-vibrant": "^3.2.1-alpha.1",
+    "particles.vue": "^3.3.3",
+    "tsparticles": "^2.3.4",
     "vue": "^2.7.10",
+    "vue2-particles": "^2.3.3",
     "vuetify": "^2.6.10"
   },
   "devDependencies": {

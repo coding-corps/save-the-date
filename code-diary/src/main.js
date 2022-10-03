@@ -32,6 +32,9 @@ import { DropdownPlugin, TablePlugin } from 'bootstrap-vue'
 import vuetify from './plugins/vuetify'
 Vue.use(DropdownPlugin)
 Vue.use(TablePlugin)
+import Particles from "vue2-particles";
+
+Vue.use(Particles);
 
 Vue.config.productionTip = false
 
