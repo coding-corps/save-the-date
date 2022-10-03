@@ -1,20 +1,19 @@
 <template>
   <header class="b-header lh-1 py-3" style="background: white: important !important;">
-    <nav class=" navbar navbar-expand-lg navbar-light  " style="background-color: white: important !important;">
-      <div class="container" style="background: white: important !important;" >
-        <a  style="margin: auto; width: 50%; padding: 10px;" href="#">
-          <span><img style="max-height: 75px;" src="../assets/logo.svg" alt="&lt;/&gt;"></span>  coding_corps
-        </a>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul  v-for='page in pages' :key='page.id' class="navbar-nav mr-auto">
-              <li class=" nav-item"><a href=""></a>
-                <a class="nav-link" :href="page.url">{{page.name}}</a>
-              </li>
-        </ul>
-      </div>
-    </nav>
-</header>
+    <v-toolbar>
+      <!-- Adjust the height to your needs, mine is 40 -->
+      <img class="mr-3" :src="require('../assets/logo.svg')" height="40"/>
+      <v-toolbar-title>
+        coding_corps
+      </v-toolbar-title>
+      <v-spacer>
+        
+      </v-spacer>
+      <v-toolbar-items  v-for='page in pages' :key='page.id' >
+        <v-btn :href="page.url" text>{{page.name}}</v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+  </header> 
 </template>
 
 <script>
