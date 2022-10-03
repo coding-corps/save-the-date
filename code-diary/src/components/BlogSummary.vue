@@ -33,17 +33,21 @@
           <h1>{{title}}</h1>
         </v-toolbar>
         <v-divider></v-divider>
-        <v-img :src="require(`../assets/${img}`)"></v-img>
+        <v-img size="50%" :src="require(`../assets/${img}`)"></v-img>
         <h2>start</h2>
-        <p>loren epsum n shiz </p>
+        <BlogContent></BlogContent>
       </v-card>
     </v-dialog>
   </v-row>
 </template>
 
 <script>
+  import BlogContent from './BlogContent.vue'
   export default {
     name: 'BlogPost',
+    comments: {
+      BlogContent
+    },
     props: ['post'],
     data () {
       return {

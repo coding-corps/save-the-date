@@ -14,8 +14,11 @@
     "core-js": "^3.8.3",
     "node-vibrant": "^3.2.1-alpha.1",
     "particles.vue": "^3.3.3",
+    "remark-html": "^15.0.1",
     "tsparticles": "^2.3.4",
     "vue": "^2.7.10",
+    "vue-resource": "^1.5.3",
+    "vue-showdown": "^3.3.0",
     "vue2-particles": "^2.3.3",
     "vuetify": "^2.6.10"
   },
