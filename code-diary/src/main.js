@@ -42,6 +42,13 @@ import VueResource from "vue-resource";
 Vue.config.productionTip = false
 Vue.use(VueResource);
 
+import BlogContent from './components/BlogContent.vue'
+
+Vue.component('blog-content', BlogContent);
+
+import VueShowdown from 'vue-showdown'
+Vue.use(VueShowdown)
+
 
 new Vue({
   vuetify,

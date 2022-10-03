@@ -35,7 +35,7 @@
         <v-divider></v-divider>
         <v-img size="50%" :src="require(`../assets/${img}`)"></v-img>
         <h2>start</h2>
-        <BlogContent></BlogContent>
+        <blog-content :doc="doc"></blog-content>
       </v-card>
     </v-dialog>
   </v-row>
@@ -55,6 +55,7 @@
         notifications: false,
         sound: true,
         widgets: false,
+        doc: this.post.doc ? this.post.doc : "",
         main: this.post.main ? this.post.main : "",
         title: this.post.title ? this.post.title : "",
         posted: this.post.date ? this.post.date : "",

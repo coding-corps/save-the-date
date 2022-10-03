@@ -95,9 +95,9 @@
       // {name:"About_us", id:"About", url:"#"}
     ],
     posts:[
-    {id:"1", hot: true, img: "vue.jpeg", summary: "first post", title:"builing with vue", tags: ["vue"] , main:"test logiv", color: '#000000de',
+    {id:"1", hot: true, img: "vue.jpeg", doc:"test.md", summary: "first post", title:"builing with vue", tags: ["vue"] , main:"test logiv", color: '#000000de',
           icon: 'mdi-code-tags',},
-    {id:"2", hot: true, img: "971.jpg", summary: "old post", title:"builing with vue", tags: ["vue"], color: '#000000de'}
+    {id:"2", hot: true, img: "971.jpg",doc:"test.md", summary: "old post", title:"builing with vue", tags: ["vue"], color: '#000000de'}
     ],
   }
   }
