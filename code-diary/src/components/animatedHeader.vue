@@ -26,7 +26,7 @@
                         modes: {
                             bubble: {
                                 distance: 400,
-                                duration: 2,
+                                duration: 6,
                                 opacity: 0.8,
                                 size: 40
                             },

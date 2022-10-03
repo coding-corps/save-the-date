@@ -1,42 +1,33 @@
 <template>
-    <div><VueShowdown :markdown="fileContent ? fileContent:'# Not found'"></VueShowdown></div>
+    <div id="post">
+      <VueShowdown :markdown="this.fileContent ? this.fileContent:'# Not found'"></VueShowdown>
+</div>
   </template>
   
-  <script>  
+  <script>
+import { templateElement } from '@babel/types';
+
+  
+
+
 
   export default {
-
     name: "BlogContent",
     props: ['doc'],
     data: function() {
       return {
         fileToRender: null,
         fileContent: null,
-        rawContent: null
+        rawContent: null,
       };
     },
     created: function() {
-      this.getContent();
-    },
-    methods: {
-      getContent() {
-        this.fileContent = "rendering";
-        // var self;
-        this.$http.get(require(`../assets/entrys/test.md`)).then(
-          response => {
-            // get body data
-  
-            this.fileContent = response.body;
-            console.log(response)
+      var Index = require(`../assets/entrys/test.md`);
+      templateElement.getElementById("post").innerHTML = "<h1> fuck</h1>"
 
-          },
-          response => {
-            // error callback
-            console.log(response)
-            this.fileContent = "An error ocurred";
-          }
-        );
-      }
-    }
+      console.log(Index)
+      this.fileContent = Index
+    },
+    methods: {}  
   };
   </script>

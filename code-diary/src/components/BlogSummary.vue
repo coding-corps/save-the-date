@@ -1,10 +1,9 @@
 <template>
-  <v-row justify="center">
+  <v-row justify="space-around">
     <v-dialog
       v-model="dialog"
-      fullscreen
-      hide-overlay
       transition="dialog-bottom-transition"
+      max-width="60%"
     >
       <template v-slot:activator="{ on, attrs }">
         <v-btn
@@ -33,7 +32,9 @@
           <h1>{{title}}</h1>
         </v-toolbar>
         <v-divider></v-divider>
-        <v-img size="50%" :src="require(`../assets/${img}`)"></v-img>
+        <div style=" text-align: center; margin: 80px;">
+          <v-img size="50%" :src="require(`../assets/${img}`)"></v-img>
+        </div>
         <h2>start</h2>
         <blog-content :doc="doc"></blog-content>
       </v-card>
