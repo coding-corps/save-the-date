@@ -142,7 +142,7 @@ try {
 } catch(e) {
     /* security error, img on diff domain */
     return defaultRGB;
-}
+    }
 
 length = data.data.length;
 
