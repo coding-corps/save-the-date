@@ -1,10 +1,9 @@
 <template>
   <v-app>
     <v-app-bar
-      app
-    >
+      app >
       <div class="d-flex align-center">
-        <!-- <DiaryHeader class="neomorph" :pages="links"></DiaryHeader> -->
+        <!-- add header component  -->
         <v-img
           alt="code diary"
           class="shrink mt-1 hidden-sm-and-down"

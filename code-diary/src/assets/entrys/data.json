@@ -2,10 +2,10 @@
     {
         "id": "2",
         "hot": true,
-        "img": "3426526.jpg",
-        "doc": "test.md",
+        "img": "vue-router.png",
+        "doc": "vue-router.md",
         "summary": "2nd post",
-        "title": "building with vue",
+        "title": "Vue Router",
         "tags": [
             "vue"
         ],

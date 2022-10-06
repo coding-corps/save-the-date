@@ -50,6 +50,11 @@
       },
     },
     methods: {
+      scrollMeTo(refName) {
+    var element = this.$refs[refName];
+    var top = element;
+    window.scrollTo(0, top);
+  },
       onSlideStart() {
         this.sliding = true
       },
