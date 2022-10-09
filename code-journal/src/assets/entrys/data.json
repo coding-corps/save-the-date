@@ -1,5 +1,5 @@
-[
-    {
+{
+    "2": {
         "id": "2",
         "hot": true,
         "img": "vue-router.png",
@@ -12,7 +12,7 @@
         "color": "#000000de",
         "icon": "mdi-code-tags"
     },
-    {
+    "111111a": {
         "id": "111111a",
         "hot": true,
         "img": "vue.jpeg",
@@ -25,4 +25,4 @@
         "color": "#000000de",
         "icon": "mdi-code-tags"
     }
-]
+}

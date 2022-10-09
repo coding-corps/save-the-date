@@ -2,7 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
-
+import BlogPage from "../components/BlogPage.vue";
+import EntriesView from "../views/EntriesView.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -19,8 +20,17 @@ const routes = [
   {
     path: "/entries",
     name: "entries",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/EntriesView.vue"),
+    component: EntriesView,
+    children: [
+      {
+        path: ":blogId",
+        component: BlogPage,
+        props: true,
+        meta: {
+          showModal: true,
+        },
+      },
+    ],
   },
 ];
 

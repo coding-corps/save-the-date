@@ -1,30 +1,19 @@
 <template>
   <v-row justify="space-around">
-    <v-dialog
-      v-model="dialog"
-      transition="dialog-bottom-transition"
-      max-width="60%"
-    >
-      <template v-slot:activator="{ on, attrs }">
-        <v-btn dark v-bind="attrs" v-on="on"> Read More? </v-btn>
-      </template>
-      <v-card>
-        <v-toolbar dark color="primary">
-          <v-btn icon dark @click="dialog = false">
-            <v-icon>mdi-close</v-icon>
-          </v-btn>
-          <v-toolbar-title></v-toolbar-title>
-          <v-spacer></v-spacer>
-          <h1>{{ title }}</h1>
-        </v-toolbar>
-        <v-divider></v-divider>
-        <div style="text-align: center; margin: 80px">
-          <v-img size="50%" :src="require(`../assets/${img}`)"></v-img>
+    <v-btn dark :to="link"> Read More? </v-btn>
+
+    <div v-if="showModal" class="modal-route">
+      <v-dialog
+        v-model="showModal"
+        persistent
+        transition="dialog-bottom-transition"
+        max-width="60%"
+      >
+        <div>
+          <router-view></router-view>
         </div>
-        <blog-showdown :doc="doc"></blog-showdown>
-        <v-divider></v-divider>
-      </v-card>
-    </v-dialog>
+      </v-dialog>
+    </div>
   </v-row>
 </template>
 
@@ -33,9 +22,18 @@ export default {
   name: "BlogSummary",
   comments: {},
   props: ["post"],
+  watch: {
+    $route: {
+      immediate: true,
+      handler: function (newVal, oldVal) {
+        console.log(newVal, oldVal);
+        this.showModal = newVal.meta && newVal.meta.showModal;
+      },
+    },
+  },
   data() {
     return {
-      dialog: false,
+      showModal: false,
       notifications: false,
       sound: true,
       widgets: false,
@@ -46,8 +44,11 @@ export default {
       summary: this.post.summary ? this.post.summary : "",
       img: this.post.img ? this.post.img : "",
       tags: this.post.tags ? this.post.tags : [],
+      id: this.post.id,
+      link: "/entries/" + this.post.id,
     };
   },
+  components: {},
 };
 </script>
 

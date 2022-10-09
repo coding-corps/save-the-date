@@ -10,5 +10,5 @@ cd dist
 git init
 git add -A
 git commit -m 'deploy'
-git push -f git@github.com:coding-corps/field-manuals.git master:gh-pages
+git push git@github.com:coding-corps/field-manuals.git main:gh-pages --force
 cd -
