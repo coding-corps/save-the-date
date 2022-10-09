@@ -13,17 +13,22 @@
       <img id="rounded-card" src="../assets/kc.png" />
 
       <h2>What is this?</h2>
+      <br />
 
-      <p>
-        I've always been more of a hands-on learner; even if I read all the
-        available literature and theory, unless I put it into practice, I'll
-        never be able to truly understand the concept.
-      </p>
-      <p>
-        This page will serve as a journal, to keep track of the things I
-        discover as I progress in my development journey; as a byproduct, this
-        page will perpetually change and evolve along with me.
-      </p>
+      <v-card color="#ababab6e">
+        <br />
+        <p>
+          I've always been more of a hands-on learner; even if I read all the
+          available literature and theory, unless I put it into practice, I'll
+          never be able to truly understand the concept.
+        </p>
+        <p>
+          This page will serve as a journal, to keep track of the things I
+          discover as I progress in my development journey; as a byproduct, this
+          page will perpetually change and evolve along with me.
+        </p>
+        <br />
+      </v-card>
     </v-container>
   </div>
 </template>
@@ -51,6 +56,6 @@ export default {
   margin-left: auto;
   margin-right: auto;
   padding: 5px !important;
-  background-color: rgba(171, 171, 171, 0.433);
+  background-color: #ababab6e;
 }
 </style>
