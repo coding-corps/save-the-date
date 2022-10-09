@@ -2,10 +2,12 @@
   <v-card class="overflow-hidden">
     <v-app-bar app shrink-on-scroll prominent class="head">
       <v-app-bar-nav-icon
+        to="/"
         dark
         @click.stop="drawer = !drawer"
       ></v-app-bar-nav-icon>
       <v-img
+        to="/"
         :src="require('../assets/images/logo-w.svg')"
         style="margin-left: 10px; max-width: 20%"
       ></v-img>
