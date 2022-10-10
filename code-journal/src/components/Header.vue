@@ -1,11 +1,6 @@
 <template>
   <v-card class="overflow-hidden">
     <v-app-bar app shrink-on-scroll prominent class="head">
-      <v-app-bar-nav-icon
-        to="/"
-        dark
-        @click.stop="drawer = !drawer"
-      ></v-app-bar-nav-icon>
       <router-link to="/">
         <v-img href="/" :src="require('../assets/images/logo-w.svg')"></v-img>
       </router-link>

@@ -4,7 +4,7 @@
     <v-container>
       <v-container class="blockquote">
         <p
-          style="margin-top: 200px"
+          style="margin-top: 75px"
           color="none"
           class="font-weight-bold text-xl-h4"
         >
@@ -57,11 +57,11 @@ export default {
   margin-left: auto;
   margin-right: auto;
   padding: 5px !important;
-  border-radius: 50%;
+  border-radius: 150px;
   background: #ffffff;
-  box-shadow: inset -20px 20px 1px #d9d9d9, inset 20px -20px 1px #ffffff;
+  box-shadow: inset -7px 7px 2px #bfbfbf, inset 7px -7px 2px #ffffff;
   border-style: solid;
-  border-width: 0.5px !important;
+  border-width: 1px !important;
   border-color: #0000000f !important;
 }
 </style>
