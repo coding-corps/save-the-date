@@ -22,7 +22,9 @@
           </v-card-title>
           <v-card-text class="white text--primary">
             <p>{{ item.summary }}</p>
-            <BlogSummary class="summary" :post="item"></BlogSummary>
+            <v-btn dark :to="item ? '/entries/' + item.id : '/entries'">
+              Read More?
+            </v-btn>
           </v-card-text>
         </v-card>
       </v-timeline-item>
@@ -37,15 +39,15 @@
   </div>
 </template>
 <script>
-import BlogSummary from "./BlogSummary.vue";
 export default {
   name: "TimeLine",
   props: ["posts"],
-  components: { BlogSummary },
+  components: {},
   data() {
     return {
       slide: 0,
       sliding: null,
+      link: "/entries/" + this.post.id,
     };
   },
   computed: {

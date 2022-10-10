@@ -1,20 +1,22 @@
 <template>
-  <v-card>
-    <v-toolbar dark color="#1c1b1bf0">
-      <v-btn icon to="./">
-        <v-icon>mdi-close</v-icon>
-      </v-btn>
-      <v-toolbar-title></v-toolbar-title>
-      <v-spacer></v-spacer>
-      <h1>{{ doc.title }}</h1>
-    </v-toolbar>
-    <v-divider></v-divider>
-    <div style="text-align: center; margin: 80px">
-      <v-img size="50%" :src="require(`../assets/${doc.img}`)"></v-img>
-    </div>
-    <blog-showdown :doc="doc.doc"></blog-showdown>
-    <v-divider></v-divider>
-  </v-card>
+  <v-dialog v-model="showModal">
+    <v-card>
+      <v-toolbar dark color="#1c1b1bf0">
+        <v-btn icon to="./">
+          <v-icon>mdi-close</v-icon>
+        </v-btn>
+        <v-toolbar-title></v-toolbar-title>
+        <v-spacer></v-spacer>
+        <h1>{{ doc.title }}</h1>
+      </v-toolbar>
+      <v-divider></v-divider>
+      <div style="text-align: center; margin: 80px">
+        <v-img size="50%" :src="require(`../assets/${doc.img}`)"></v-img>
+      </div>
+      <blog-showdown :doc="doc.doc"></blog-showdown>
+      <v-divider></v-divider>
+    </v-card>
+  </v-dialog>
 </template>
 <script>
 import Posts from "../assets/entrys/data.json";
@@ -24,6 +26,7 @@ export default {
   props: ["blogId"],
   data: function () {
     return {
+      showModal: false,
       doc: {},
     };
   },
@@ -41,3 +44,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.modall {
+  padding: 16px;
+}
+</style>

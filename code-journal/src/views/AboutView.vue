@@ -2,27 +2,32 @@
 <template>
   <div class="about">
     <v-container>
-      <div class="blockquote">
-        <p>
+      <v-container class="blockquote">
+        <p
+          style="margin-top: 200px"
+          color="none"
+          class="font-weight-bold text-xl-h4"
+        >
           “For the things we have to learn before we can do them, we learn by
-          doing them” <br />
-          ― Aristotle, The Nicomachean Ethics
+          doing them”
         </p>
-      </div>
+        <p>~ Aristotle, The Nicomachean Ethics</p>
+      </v-container>
 
       <img id="rounded-card" src="../assets/kc.png" />
 
       <h2>What is this?</h2>
       <br />
 
-      <v-card color="#ababab6e">
+      <v-card flat class="blockquote">
         <br />
-        <p>
+        <p class="font-weight-medium text-xl-h4">
           I've always been more of a hands-on learner; even if I read all the
-          available literature and theory, unless I put it into practice, I'll
-          never be able to truly understand the concept.
+          available literature and theory,<br />
+          unless I put it into practice, I'd never be able to truly understand
+          the concept.
         </p>
-        <p>
+        <p class="font-weight-medium text-xl-h4">
           This page will serve as a journal, to keep track of the things I
           discover as I progress in my development journey; as a byproduct, this
           page will perpetually change and evolve along with me.
@@ -40,14 +45,10 @@ export default {
 </script>
 <style>
 .blockquote {
-  margin: 0;
+  padding: 5px !important;
+  background-color: #ffffffe9 !important;
 }
 
-.blockquote p {
-  padding: 15px;
-  background: #eee;
-  border-radius: 5px;
-}
 #rounded-card {
   border-radius: 50%;
   max-height: 150px;
@@ -56,6 +57,11 @@ export default {
   margin-left: auto;
   margin-right: auto;
   padding: 5px !important;
-  background-color: #ababab6e;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: inset -20px 20px 1px #d9d9d9, inset 20px -20px 1px #ffffff;
+  border-style: solid;
+  border-width: 0.5px !important;
+  border-color: #0000000f !important;
 }
 </style>
