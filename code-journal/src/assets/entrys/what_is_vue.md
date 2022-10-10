@@ -18,14 +18,15 @@ Vue's two main characteristics are:
 
 
   EXAMPLE:
-  ``` html
+ <pre>
+<code> 
+
   <div id="app">
     <button @click="count++">
       Count is: {{ count }}
     </button>
   </div>
-  ```
-  ``` js
+
   import { createApp } from 'vue'
 
   createApp({
@@ -35,14 +36,14 @@ Vue's two main characteristics are:
       }
     }
   }).mount('#app')
-  ```
-
-
+</code> 
+</pre>
 # Components
-Single-File Components (also known as ****.vue*** files, abbreviated as SFC) are  file formats used to author Vue components in the majority of build-tool enabled Vue applications. 
+Single-File Components (also known as ***.vue*** files, abbreviated as SFC) are  file formats used to author Vue components in the majority of build-tool enabled Vue applications. 
 
 As the name suggests, the logic (JavaScript), template (HTML), and styling (CSS) of a component are all contained in a single file called a Vue SFC. Here is the above illustration in SFC format:
-``` html  
+<pre>
+<code> 
   <script>
   export default {
   // Properties returned from data() become reactive state
@@ -79,8 +80,9 @@ button {
   font-weight: bold;
 }
 </style> 
+</code>
+</pre>
 
-```
 
 Vue is made to be adaptable and gradually adopted. Vue has a variety of uses that you can choose from according on your use case:
 * Static HTML improvement without a build step
