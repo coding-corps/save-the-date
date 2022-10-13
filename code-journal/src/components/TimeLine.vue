@@ -15,7 +15,12 @@
         fill-dot
       >
         <v-card style="padding: 15px">
-          <v-img height="200px" :src="require(`../assets/${item.img}`)">
+          <v-img
+            contain
+            height="250px"
+            width="100%"
+            :src="require(`../assets/${item.img}`)"
+          >
           </v-img>
           <v-card-title class="text-h6">
             {{ item.title }}

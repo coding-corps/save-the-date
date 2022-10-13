@@ -2,20 +2,7 @@
     "c483ee82-d8ad-4122-b381-43c1cefca3c0": {
         "id": "c483ee82-d8ad-4122-b381-43c1cefca3c0",
         "hot": true,
-        "img": "vue.jpeg",
-        "doc": "what_is_vue.md",
-        "summary": "if you want to learn web development but aren't sure where to start, go with Vue. Regardless of whether you end up loving it and using it often in the future, it's a great introduction to the important concepts underlying modern UI development and a powerful, enjoyable library to build an app with.",
-        "title": "CREATING VUE COMPONENTS",
-        "tags": [
-            "vue"
-        ],
-        "color": "#000000de",
-        "icon": "mdi-code-tags"
-    },
-    "c483ee82-d8ad-4122-b381-43c1cefca3c0": {
-        "id": "c483ee82-d8ad-4122-b381-43c1cefca3c0",
-        "hot": true,
-        "img": "vue.jpeg",
+        "img": "images/what_is_vue/Vuejs.jpg",
         "doc": "what_is_vue.md",
         "summary": "if you want to learn web development but aren't sure where to start, go with Vue. Regardless of whether you end up loving it and using it often in the future, it's a great introduction to the important concepts underlying modern UI development and a powerful, enjoyable library to build an app with.",
         "title": "WHAT IS VUE?",
