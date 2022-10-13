@@ -16,8 +16,9 @@ Vue's two main characteristics are:
 
 EXAMPLE:
 
+<!-- testing  -->
+
 <pre>
-  <code>
     &lt;div id="app" &gt;
       &lt;button @click="count++"&gt;
         Count is: {{ count }}
@@ -33,8 +34,8 @@ EXAMPLE:
           }
         }).mount('#app')
       &lt;/script&gt;
-  </code>
 </pre>
+
 <br/>
 
 # Components
@@ -45,44 +46,40 @@ In the example below we can see that a Vue SFC is a natural extension of the cla
 The &lt;template&gt;, &lt;script&gt;, and &lt;style&gt; represent the view, logic, and styling of a component that can be imported and used throughout your project.
 
 <pre>
-<code> 
-  &lt;script&gt;
-  export default {
-  // Properties returned from data() become reactive state
-  // and will be exposed on `this`.
-    data() {
-      return {
-        count: 0
+    &lt;script&gt;
+      export default {
+      // Properties returned from data() become reactive state
+      // and will be exposed on `this`.
+        data() {
+          return {
+            count: 0
+          }
+        },
+        // Methods are functions that mutate state and trigger updates.
+        // They can be bound as event listeners in templates.
+        methods: {
+          increment() {
+            this.count++
+          }
+      },
+      // Lifecycle hooks are called at different stages
+      // of a component&#39;s lifecycle.
+      // This function will be called when the component is mounted.
+      mounted() {
+        console.log(`The initial count is ${this.count}.`)
       }
-    },
-    // Methods are functions that mutate state and trigger updates.
-    // They can be bound as event listeners in templates.
-    methods: {
-      increment() {
-        this.count++
+    }
+    &lt;/script&gt;
+    &lt;template&gt;
+      &lt;!-- this.count is displayed reactively here using Declarative rendering --&gt;
+      &lt;button @click=&quot;count++&quot;&gt;Count is: {{ count }}&lt;/button&gt;
+    &lt;/template&gt;
+
+    &lt;style scoped&gt;
+      button {
+        font-weight: bold;
       }
-  },
-  // Lifecycle hooks are called at different stages
-  // of a component&#39;s lifecycle.
-  // This function will be called when the component is mounted.
-  mounted() {
-    console.log(`The initial count is ${this.count}.`)
-  }
-}
-&lt;/script&gt;
-
-&lt;template&gt;
-  &lt;!-- this.count is displayed reactively here using Declarative rendering --&gt;
-  &lt;button @click=&quot;count++&quot;&gt;Count is: {{ count }}&lt;/button&gt;
-&lt;/template&gt;
-
-&lt;style scoped&gt;
-
-button {
-  font-weight: bold;
-}
-&lt;/style&gt;
-</code>
+    &lt;/style&gt;
 </pre>
 <hr>
 In another entry, we will discuss the process of creating proper single-file components (SFC), like a header and a footer that you can use as a strong starting point for future Vue projects.
@@ -336,10 +333,4 @@ The created code base is now available for editing you can also leave the server
 
 <br/>
 <style>
-pre code {
-  width:100%;
-  background-color: #1c1b1bf0;
-  display: block;
-    overflow: scroll;
-}
 </style>
