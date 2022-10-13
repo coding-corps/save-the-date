@@ -24,8 +24,10 @@ EXAMPLE:
       Count is: {{ count }}
       &lt;/button&gt;
     &lt;/div&gt;
+</pre>
 
-    <script>
+```
+ <script>
     import { createApp } from 'vue'
       createApp({
         data() {
@@ -35,7 +37,7 @@ EXAMPLE:
         }
       }).mount('#app')
     </script>
-</pre>
+```
 
 <br/>
 
