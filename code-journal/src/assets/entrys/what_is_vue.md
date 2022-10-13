@@ -178,7 +178,7 @@ After selecting `Manually select features`, you will receive several options, li
 
 However, for this tutorial, select the following by pressing &lt;space&gt; while the cursor is highlighting the option:
 
-```
+<pre>
 Vue CLI v5.0.8
 ? Please pick a preset: Manually select features
 ? Check the features needed for your project: (Press &lt;/space&gt;/ to select, &lt;/a&gt;/ to toggle all, &lt;/i&gt;/ to invert selection, and &lt;/enter&gt;/ to proceed)
@@ -191,7 +191,7 @@ Vue CLI v5.0.8
  ◉ Linter / Formatter
  ◯ Unit Testing
  ◯ E2E Testing
-```
+</pre>
 
 <br/>
 ### What are these options, and why do we want them?
@@ -260,8 +260,7 @@ ESLint + Prettier
 
 The following option lets you decide when ESLint should format your code. When you save your work or upload it to a platform like GitHub, GitLab, or BitBucket, this can happen. It is advised to check any changes before committing to version control by using Lint on save:
 
-```
-
+<pre>
 Vue CLI v5.0.8
 ? Please pick a preset: Manually select features
 ? Check the features needed for your project: Babel, PWA, Router, Linter
@@ -272,7 +271,7 @@ Vue CLI v5.0.8
 ❯◉ Lint on save
 ◯ Lint and fix on commit
 
-```
+</pre>
 
 after going through all your selected options, the CLI will ask you if you want to store these configurations as dedicated files or in the package.json.
 
