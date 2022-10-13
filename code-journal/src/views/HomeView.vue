@@ -6,7 +6,7 @@
         alt="CC logo"
         src="../assets/images/logo-b.svg"
       ></v-img>
-      <v-btn to="/entries">Lessons</v-btn>
+      <v-btn to="/entries">Entries</v-btn>
     </v-container>
     <AppFooter></AppFooter>
   </v-main>
