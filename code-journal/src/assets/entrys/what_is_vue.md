@@ -19,21 +19,22 @@ EXAMPLE:
 <!-- testing  -->
 
 <pre>
-    &lt;div id="app" &gt;
-      &lt;button @click="count++"&gt;
-        Count is: {{ count }}
-        &lt;/button&gt;
-      &lt;/div&gt;
-      &lt;script&gt;
-      import { createApp } from 'vue'
-        createApp({
-          data() {
-            return {
-              count: 0
-            }
+  &lt;div id="app" &gt;
+    &lt;button @click="count++"&gt;
+      Count is: {{ count }}
+      &lt;/button&gt;
+    &lt;/div&gt;
+    
+    &lt;script&gt;
+    import { createApp } from 'vue'
+      createApp({
+        data() {
+          return {
+            count: 0
           }
-        }).mount('#app')
-      &lt;/script&gt;
+        }
+      }).mount('#app')
+    &lt;/script&gt;
 </pre>
 
 <br/>
@@ -333,4 +334,10 @@ The created code base is now available for editing you can also leave the server
 
 <br/>
 <style>
+ pre {    
+    font-size: 15px;
+        font-family: Monaco, 'Courier New', Courier, monospace;
+    overflow-x: scroll;
+    line-height: 1.5;
+}
 </style>
