@@ -77,11 +77,11 @@ The &lt;template&gt;, &lt;script&gt;, and &lt;style&gt; represent the view, logi
       &lt;button @ click=&quot;count++&quot;&gt;Count is: {{ count }}&lt;/button&gt;
     &lt;/template&gt;
 
-    &lt;style scoped&gt;
+    <style scoped>
       button {
         font-weight: bold;
       }
-    &lt;/style&gt;
+    </style>
 
 </pre>
 <hr>
