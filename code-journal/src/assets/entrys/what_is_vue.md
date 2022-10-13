@@ -42,7 +42,7 @@ EXAMPLE:
 Vue Single-File Components (a.k.a. \*.vue files, abbreviated as SFC) is a special file format that allows us to encapsulate the template, logic, and styling of a Vue component in a single file.
 
 In the example below we can see that a Vue SFC is a natural extension of the classic trio of HTML, CSS, and JavaScript.
-The `<template>`, `<script>`, and `<style>` blocks represent the view, logic, and styling of a component that can be imported and used throughout your project.
+The &lt;template&gt;, &lt;script&gt;, and &lt;style&gt; represent the view, logic, and styling of a component that can be imported and used throughout your project.
 
 <pre>
 <code> 
@@ -178,12 +178,12 @@ However, for the purposes of this example, we will select "Manually select featu
 
 After selecting `Manually select features`, you will receive several options, listed below, you will notice that some of these items are already selected. You may select as many or as few as you would like.
 
-However, for this tutorial, select the following by pressing `<space>` while the cursor is highlighting the option:
+However, for this tutorial, select the following by pressing &lt;space&gt; while the cursor is highlighting the option:
 
 ```
 Vue CLI v5.0.8
 ? Please pick a preset: Manually select features
-? Check the features needed for your project: (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+? Check the features needed for your project: (Press &lt;/space&gt;/ to select, &lt;/a&gt;/ to toggle all, &lt;/i&gt;/ to invert selection, and &lt;/enter&gt;/ to proceed)
 ❯◉ Babel
  ◯ TypeScript
  ◉ Progressive Web App (PWA) Support
@@ -270,7 +270,7 @@ Vue CLI v5.0.8
 ? Choose a version of Vue.js that you want to start the project with 2.x
 ? Use history mode for router? (Requires proper server setup for index fallback in production) No
 ? Pick a linter / formatter config: Basic
-? Pick additional lint features: (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+? Pick additional lint features: (Press &lt;/space&gt;/ to select, &lt;/a&gt;/ to toggle all, &lt;/i&gt;/ to invert selection, and &lt;/enter&gt;/ to proceed)
 ❯◉ Lint on save
 ◯ Lint and fix on commit
 
