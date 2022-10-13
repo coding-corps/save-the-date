@@ -20,11 +20,11 @@ EXAMPLE:
 
 <pre>
   &lt;div id="app" &gt;
-    &lt;button @click="count++"&gt;
+    &lt;button @ click="count++"&gt;
       Count is: {{ count }}
       &lt;/button&gt;
     &lt;/div&gt;
-    
+
     &lt;script&gt;
     import { createApp } from 'vue'
       createApp({
@@ -73,7 +73,7 @@ The &lt;template&gt;, &lt;script&gt;, and &lt;style&gt; represent the view, logi
     &lt;/script&gt;
     &lt;template&gt;
       &lt;!-- this.count is displayed reactively here using Declarative rendering --&gt;
-      &lt;button @click=&quot;count++&quot;&gt;Count is: {{ count }}&lt;/button&gt;
+      &lt;button @ click=&quot;count++&quot;&gt;Count is: {{ count }}&lt;/button&gt;
     &lt;/template&gt;
 
     &lt;style scoped&gt;
