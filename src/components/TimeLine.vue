@@ -15,14 +15,21 @@
         fill-dot
       >
         <v-card style="padding: 15px">
-          <v-img height="200px" :src="require(`../assets/${item.img}`)">
+          <v-img
+            contain
+            height="250px"
+            width="100%"
+            :src="require(`../assets/${item.img}`)"
+          >
           </v-img>
           <v-card-title class="text-h6">
             {{ item.title }}
           </v-card-title>
           <v-card-text class="white text--primary">
             <p>{{ item.summary }}</p>
-            <BlogSummary class="summary" :post="item"></BlogSummary>
+            <v-btn dark :to="item ? '/entries/' + item.id : '/entries'">
+              Read More?
+            </v-btn>
           </v-card-text>
         </v-card>
       </v-timeline-item>
@@ -37,15 +44,15 @@
   </div>
 </template>
 <script>
-import BlogSummary from "./BlogSummary.vue";
 export default {
   name: "TimeLine",
   props: ["posts"],
-  components: { BlogSummary },
+  components: {},
   data() {
     return {
       slide: 0,
       sliding: null,
+      link: "/entries/" + this.post.id,
     };
   },
   computed: {

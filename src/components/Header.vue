@@ -1,14 +1,9 @@
 <template>
   <v-card class="overflow-hidden">
     <v-app-bar app shrink-on-scroll prominent class="head">
-      <v-app-bar-nav-icon
-        dark
-        @click.stop="drawer = !drawer"
-      ></v-app-bar-nav-icon>
-      <v-img
-        :src="require('../assets/images/logo-w.svg')"
-        style="margin-left: 10px; max-width: 20%"
-      ></v-img>
+      <router-link to="/">
+        <v-img href="/" :src="require('../assets/images/logo-w.svg')"></v-img>
+      </router-link>
       <v-spacer></v-spacer>
       <v-btn dark to="/" icon>
         <v-icon>mdi-home</v-icon>
