@@ -27,7 +27,7 @@ EXAMPLE:
 </pre>
 
 ```
- <script>
+ &lt;script&gt;
     import { createApp } from 'vue'
       createApp({
         data() {
@@ -36,7 +36,7 @@ EXAMPLE:
           }
         }
       }).mount('#app')
-    </script>
+    &lt;/script&gt;
 ```
 
 <br/>
