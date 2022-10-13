@@ -17,26 +17,26 @@ Vue's two main characteristics are:
 EXAMPLE:
 
 <pre>
-<code>
-  <div id="app">
-    <button @click="count++">
-      Count is: {{ count }}
-    </button>
-  </div>
-  <script>
-    import { createApp } from 'vue'
-      createApp({
-        data() {
-          return {
-            count: 0
+  <code>
+    &lt;div id="app" &gt;
+      &lt;button @click="count++"&gt;
+        Count is: {{ count }}
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;script&gt;
+      import { createApp } from 'vue'
+        createApp({
+          data() {
+            return {
+              count: 0
+            }
           }
-        }
-      }).mount('#app')
-  </script>
-</code> 
+        }).mount('#app')
+      &lt;/script&gt;
+  </code>
 </pre>
-
 <br/>
+
 # Components
 
 Vue Single-File Components (a.k.a. \*.vue files, abbreviated as SFC) is a special file format that allows us to encapsulate the template, logic, and styling of a Vue component in a single file.
@@ -46,7 +46,7 @@ The `<template>`, `<script>`, and `<style>` blocks represent the view, logic, an
 
 <pre>
 <code> 
-  <script>
+  &lt;script&gt;
   export default {
   // Properties returned from data() become reactive state
   // and will be exposed on `this`.
@@ -63,25 +63,25 @@ The `<template>`, `<script>`, and `<style>` blocks represent the view, logic, an
       }
   },
   // Lifecycle hooks are called at different stages
-  // of a component's lifecycle.
+  // of a component&#39;s lifecycle.
   // This function will be called when the component is mounted.
   mounted() {
     console.log(`The initial count is ${this.count}.`)
   }
 }
-</script>
+&lt;/script&gt;
 
-<template>
-  <!-- this.count is displayed reactively here using Declarative rendering -->
-  <button @click="count++">Count is: {{ count }}</button>
-</template>
+&lt;template&gt;
+  &lt;!-- this.count is displayed reactively here using Declarative rendering --&gt;
+  &lt;button @click=&quot;count++&quot;&gt;Count is: {{ count }}&lt;/button&gt;
+&lt;/template&gt;
 
-<style scoped>
+&lt;style scoped&gt;
 
 button {
   font-weight: bold;
 }
-</style>
+&lt;/style&gt;
 </code>
 </pre>
 <hr>
@@ -119,7 +119,7 @@ You will need the following:
 - Node.js version 10.6.0 or greater installed on your computer.
 - basic knowledge of JavaScript, HTML, and CSS
 
-# Step 1 — Download the Vue CLI
+## Step 1 — Download the Vue CLI
 
 You must issue a command through npm or Yarn to download Vue CLI however it's advisable to stick to one approach or the other throughout your project.
 
@@ -147,7 +147,7 @@ OR
 <br/>
 At this point, you have successfully downloaded npm globally along with the Vue CLI tool that you will use in the next section to create a generated Vue.js project.
 
-# Step 2 — Generating a Single-Page Application
+## Step 2 — Generating a Single-Page Application
 
 manually creating a project is not the most efficient use of your time Since setting up a new Vue.js project from scratch can potentially take hours.
 
@@ -335,3 +335,11 @@ You have now created your first vue web application using Vue.js and the vue CLI
 The created code base is now available for editing you can also leave the server running to monitor your code changes live in the browser.
 
 <br/>
+<style>
+pre code {
+  width:100%;
+  background-color: #1c1b1bf0;
+  display: block;
+    overflow: scroll;
+}
+</style>
