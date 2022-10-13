@@ -5,14 +5,14 @@ It provides a declarative and component-based programming approach that aids in 
 
 Because it incorporates the prop-driven development of React and the templating capability of Angular, Vue.js is frequently referred to as a hybrid of React and Angular.
 
-however vue emphasizes regular HTML and CSS rather than being a CSS-in-JS framework like React or depending on TypeScript (a superset of JavaScript), like Angular does.This makes Vue an approachable framework for beginners to pick up.
+However, vue emphasizes regular HTML and CSS rather than being a CSS-in-JS framework like React or depending on TypeScript (a superset of JavaScript), as Angular does. This makes Vue an approachable framework for beginners to pick up.
 
 if you imagine javascript as an alphabet, then Vue is a phrasebook that gives programmers the tools to create complex phrases in a shorter time.
 
 Vue's two main characteristics are:
 
-- **_Declarative rendering_**, which enables us to declaratively describe HTML output depending on JavaScript state. Vue extends normal HTML with a template vocabulary. To interpolate the necessary data in the DOM, double curly braces are utilized as placeholders.
-- **_Reactivity_**: When JavaScript state changes, Vue automatically monitors them and quickly updates the DOM, this is one of vues most recognizably distinctive features. It facilitates easy-to-understand state management.
+- **_Declarative rendering_**, which enables us to declaratively describe HTML output depending on the JavaScript state. Vue extends normal HTML with a template vocabulary. To interpolate the necessary data in the DOM, double curly braces are utilized as placeholders.
+- **_Reactivity_**: When JavaScript state changes, Vue automatically monitors them and quickly updates the DOM, this is one of Vues most recognizably distinctive features. It facilitates easy-to-understand state management.
 
 EXAMPLE:
 
@@ -41,8 +41,8 @@ EXAMPLE:
 
 Vue Single-File Components (a.k.a. \*.vue files, abbreviated as SFC) is a special file format that allows us to encapsulate the template, logic, and styling of a Vue component in a single file.
 
-In the example below we can see that a Vue SFC is a natural extension of the classic trio of HTML, CSS and JavaScript.
-The `<template>`, `<script>`, and `<style>` blocks represents the view, logic and styling of a componentwhich can be imported and used throughout your project.
+In the example below we can see that a Vue SFC is a natural extension of the classic trio of HTML, CSS, and JavaScript.
+The `<template>`, `<script>`, and `<style>` blocks represent the view, logic, and styling of a component that can be imported and used throughout your project.
 
 <pre>
 <code> 
@@ -84,12 +84,10 @@ button {
 </style>
 </code>
 </pre>
-
-<br/>
-<br/>
 <hr>
-In another entry we will discuss the process of creating proper single-file components (SFC), like a header and a footer that you can use as a strong starting point for future Vue projects.
+In another entry, we will discuss the process of creating proper single-file components (SFC), like a header and a footer that you can use as a strong starting point for future Vue projects.
 <hr>
+<br/>
 
 Vue has a variety of uses that you can choose from according on your use case:
 
@@ -100,7 +98,7 @@ Vue has a variety of uses that you can choose from according on your use case:
 - Static site generation using Jamstack (SSG)
 - focusing on WebGL, mobile, desktop, and even the terminal
 
-By the end of this blog, if you follow alog, You should have a functioning Vue.js application running on a local server that renders quick feedback in-browser while you work using hot module reloading with Webpack.
+By the end of this blog, if you follow along, You should have a functioning Vue.js application running on a local server that renders quick feedback in-browser while you work using hot module reloading with Webpack.
 
 <br>
 
@@ -112,7 +110,7 @@ there are 2 major versions of Vue: Vue2 & Vue3
 Vue 3 is the current, most recent major version of Vue.
 It has new capabilities including teleport, suspense, and multiple root elements per template that are not included in Vue 2. Additionally, it has breaking changes that render Vue 2 incompatible.
 
-Because many libraries used in creating this blog are still not Vue3 compatible, Vue2 was used. however much of the syntax and practices from Vue 2 are used in Vue 3 and the migration from Vue2 to Vue3 is relitively simple to proform at a later date.
+Because many libraries used in creating this blog are still not Vue3 compatible, Vue2 was used. however much of the syntax and practices from Vue 2 are used in Vue 3 and the migration from Vue2 to Vue3 is relatively simple to perform at a later date.
 
 # Prerequisites
 
@@ -123,7 +121,7 @@ You will need the following:
 
 # Step 1 — Download the Vue CLI
 
-You must issue a command through npm or Yarn to download Vue CLI however it's advisable to stick to one approach or the other over the course of your project.
+You must issue a command through npm or Yarn to download Vue CLI however it's advisable to stick to one approach or the other throughout your project.
 
 Moving forward, this tutorial will use npm commands.
 
@@ -135,7 +133,7 @@ npm i -g @vue/cli
 ```
 
 - in the context of command options, -g indicates that the code should be installed on your computer globally.
-  you can add it if you want to utilize the CLI from any location on your machine, if you do not include it the vue cli will only function in the directory where it was installed.
+  you can add it if you want to utilize the CLI from any location on your machine, if you do not include it the vue CLI will only function in the directory where it was installed.
   <br/>
   After installation, you will have access to the vue binary in your command line.
   You can verify that it is properly installed by simply running
@@ -176,11 +174,11 @@ Vue CLI v5.0.8
 ```
 
 You can use the Vue 2 or Vue 3 defaults if you do not want to specify selected features.
-However for the purposes of this example, we will select "Manually select features" in order to observe how each option is installed by the CLI.
+However, for the purposes of this example, we will select "Manually select features" to observe how each option is installed by the CLI.
 
-After selecting `Manually select features`, you will receive a number of options, listed below, you will notice that some of these items are already selected. You may select as many or as few as you would like.
+After selecting `Manually select features`, you will receive several options, listed below, you will notice that some of these items are already selected. You may select as many or as few as you would like.
 
-However, for this tutorial, select the following by pressing `<space>` while the curser is highlighting the option:
+However, for this tutorial, select the following by pressing `<space>` while the cursor is highlighting the option:
 
 ```
 Vue CLI v5.0.8
@@ -198,15 +196,15 @@ Vue CLI v5.0.8
 ```
 
 <br/>
-### What are these, why do we want them?
+### What are these options, and why do we want them?
 
-- `Babel` is a toolchain that is mainly used to convert ECMAScript 2015+ code into a **_backwards compatible_** version of JavaScript in current and **older browsers** or **environments**.
+- `Babel` is a toolchain that is mainly used to convert ECMAScript 2015+ code into a **_backward compatible_** version of JavaScript in current and **older browsers** or **environments**.
 
 - `Progressive Web Application (PWA)` is a type of web app that can operate both as a web page and mobile app on any device.<br/>
   `// This website is a PWA so you can download it to your device if you wish.`
 
 - `Vue Router` helps link between the browser's URL/History and Vue's components allowing for certain paths to render whatever view is associated with it.<br/>
-  `// It is the reason why you can share the url to this individual blog entry`
+  `// It is the reason why you can share the URL to this individual blog entry`
 
 - `linting` is an automated process for static analysis of the codebase for potential errors and inconsistencies with the project’s coding standards. <br/>
 
@@ -229,10 +227,10 @@ Vue CLI v5.0.8
 ❯ 2.x
 ```
 
-Next, Vue CLI will ask about history mode. History mode will make each route its own URL. This means you will not have the /#/ (hash) in your application’s URL
+Next, Vue CLI will ask about the history mode. History mode will make each route its own URL. This means you will not have the /#/ (hash) in your application’s URL
 If you do use history mode, you will need a Node server to run your project. This is not a problem, because Vue CLI 3 provides you with a Node server.
 
-for this page because i wont initially be making any requests to a server i will Type N to answer yes to history mode:
+for this page because I won't initially be making any requests to a server I will Type N to answer yes to history mode:
 
 ```
 Vue CLI v5.0.8
@@ -242,7 +240,7 @@ Vue CLI v5.0.8
 ? Use history mode for router? (Requires proper server setup for index fallback in production) (Y/n)
 ```
 
-Next you will receive questions regarding the linter style.
+Next, you will receive questions regarding the linter style.
 the linter will evaluate your code as you develop your application and enforce syntactical rules during development.
 this helps to keep your code consistent no matter who works on your project and what operating system or IDE a developer is using.
 
@@ -280,7 +278,7 @@ Vue CLI v5.0.8
 
 after going through all your selected options, the CLI will ask you if you want to store these configurations as dedicated files or in the package.json.
 
-For a number of reasons, storing configurations in separate files is considered best practice. This way, configurations can be more easily shared between projects, and you'll also keep your `package.json` as readable as possible by defining only the crucial details about your app
+For several reasons, storing configurations in separate files is considered the best practice. This way, configurations can be more easily shared between projects, and you'll also keep your `package.json` as readable as possible by defining only the crucial details about your app
 
 ```
 Vue CLI v5.0.8
@@ -299,7 +297,7 @@ In package.json
 The CLI tool will then ask if you wish to save this choice as a preset for upcoming projects.
 If you are creating multiple projects for your employer and you want things to be consistent, this is helpful.
 
-Go ahead and save this configuraion as a preset; Vue CLI will ask you to rename it. Name it `coding_corps vue intro`... or what ever you would like:
+Go ahead and save this configuration as a preset; Vue CLI will ask you to rename it. Name it `coding_corps vue intro`... or whatever you would like:
 
 At this point, you will have something along the lines of this in your terminal summarizing all of your options:
 
@@ -316,7 +314,7 @@ Vue CLI v5.0.8
 ? Save this as a preset for future projects? (y/N)
 ```
 
-Press ENTER, and Vue CLI will start creating your app.
+Press ENTER and Vue CLI will start creating your app.
 When completed, navigate to the project folder and run the cmd `npm run serve`
 
 You do not need to download dependencies, as the CLI already did that for you.
@@ -333,7 +331,7 @@ border: 5px solid #555;
 <br/>
 <center> <h1>Congratulations!!</h1></center>
 
-You have now created your first vue web application using Vue.js and the vue cli!
+You have now created your first vue web application using Vue.js and the vue CLI!
 The created code base is now available for editing you can also leave the server running to monitor your code changes live in the browser.
 
 <br/>
