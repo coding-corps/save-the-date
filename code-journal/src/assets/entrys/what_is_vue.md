@@ -181,7 +181,7 @@ However, for this tutorial, select the following by pressing &lt;space&gt; while
 <pre>
 Vue CLI v5.0.8
 ? Please pick a preset: Manually select features
-? Check the features needed for your project: (Press &lt;/space&gt;/ to select, &lt;/a&gt;/ to toggle all, &lt;/i&gt;/ to invert selection, and &lt;/enter&gt;/ to proceed)
+? Check the features needed for your project: (Press &lt;space&gt; to select, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection, and &lt;enter&gt; to proceed)
 ❯◉ Babel
  ◯ TypeScript
  ◉ Progressive Web App (PWA) Support
@@ -267,7 +267,7 @@ Vue CLI v5.0.8
 ? Choose a version of Vue.js that you want to start the project with 2.x
 ? Use history mode for router? (Requires proper server setup for index fallback in production) No
 ? Pick a linter / formatter config: Basic
-? Pick additional lint features: (Press &lt;/space&gt;/ to select, &lt;/a&gt;/ to toggle all, &lt;/i&gt;/ to invert selection, and &lt;/enter&gt;/ to proceed)
+? Pick additional lint features: (Press &lt;space &gt; to select, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection, and &lt;enter&gt; to proceed)
 ❯◉ Lint on save
 ◯ Lint and fix on commit
 
