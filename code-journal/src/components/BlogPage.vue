@@ -1,5 +1,5 @@
 <template>
-  <v-dialog v-model="showModal">
+  <v-dialog persistent v-model="showModal">
     <v-card>
       <v-toolbar dark color="#1c1b1bf0">
         <v-btn icon to="./">
