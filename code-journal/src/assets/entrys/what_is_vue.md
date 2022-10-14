@@ -23,10 +23,9 @@ EXAMPLE:
     &lt;button @ click="count++"&gt;
       Count is: {{ count }}
       &lt;/button&gt;
-    &lt;/div&gt;
+  &lt;/div&gt;
 </pre>
-
-```
+<pre>
  &lt;script&gt;
     import { createApp } from 'vue'
       createApp({
@@ -36,8 +35,8 @@ EXAMPLE:
           }
         }
       }).mount('#app')
-    &lt;/script&gt;
-```
+  &lt;/script&gt;
+</pre>
 
 <br/>
 
@@ -49,8 +48,8 @@ In the example below we can see that a Vue SFC is a natural extension of the cla
 The &lt;template&gt;, &lt;script&gt;, and &lt;style&gt; represent the view, logic, and styling of a component that can be imported and used throughout your project.
 
 <pre>
-    <script>
-      export default {
+  &lt;script&gt;
+    export default {
       // Properties returned from data() become reactive state
       // and will be exposed on `this`.
         data() {
@@ -72,19 +71,20 @@ The &lt;template&gt;, &lt;script&gt;, and &lt;style&gt; represent the view, logi
         console.log(`The initial count is ${this.count}.`)
       }
     }
-    </script>
-
-    &lt;template&gt;
-      &lt;!-- this.count is displayed reactively here using Declarative rendering --&gt;
-      &lt;button @ click=&quot;count++&quot;&gt;Count is: {{ count }}&lt;/button&gt;
-    &lt;/template&gt;
-
-    <style scoped>
+  &lt;/script&gt;
+</pre>
+<pre>
+  &lt;template&gt;
+    &lt;!-- this.count is displayed reactively here using Declarative rendering --&gt;
+    &lt;button @ click=&quot;count++&quot;&gt;Count is: {{ count }}&lt;/button&gt;
+  &lt;/template&gt;
+</pre>
+<pre>
+  &lt;style scoped&gt;
       button {
         font-weight: bold;
       }
-    </style>
-
+  &lt;/style&gt;
 </pre>
 <hr>
 In another entry, we will discuss the process of creating proper single-file components (SFC), like a header and a footer that you can use as a strong starting point for future Vue projects.
