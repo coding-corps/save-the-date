@@ -14,23 +14,26 @@
         :icon="item.icon ? item.icon : 'mdi-head-plus-outline'"
         fill-dot
       >
-        <v-card style="padding: 15px">
+        <v-card class="cardMin" style="padding: 15px">
           <v-img
             contain
             height="250px"
             width="100%"
             :src="require(`../assets/${item.img}`)"
           >
+            <span class="title-span">
+              <h4>{{ item.title }}</h4>
+            </span>
+            <span class="date-span"> {{ item.date }} </span>
           </v-img>
-          <v-card-title class="text-h6">
-            {{ item.title }}
-          </v-card-title>
-          <v-card-text class="white text--primary">
-            <p>{{ item.summary }}</p>
-            <v-btn dark :to="item ? '/entries/' + item.id : '/entries'">
-              Read More?
-            </v-btn>
-          </v-card-text>
+          <div class="cardMax">
+            <v-card-text class="white text--primary">
+              <p>{{ item.summary }}</p>
+              <v-btn dark :to="item ? '/entries/' + item.id : '/entries'">
+                Read More?
+              </v-btn>
+            </v-card-text>
+          </div>
         </v-card>
       </v-timeline-item>
       <v-timeline-item
@@ -83,3 +86,48 @@ export default {
   },
 };
 </script>
+
+<style>
+/* .cardMin > .cardMax {
+  position: relative !important;
+  transform: translateY(100px) !important;
+  transition: all 0.2s ease-in-out;
+}
+.cardMin:hover .cardMax {
+  transform: translateY(0) !important;
+} */
+
+.cardMin {
+  overflow: hidden;
+  position: relative;
+  transition: height 4.2s;
+  -webkit-transition: height 4.2s;
+  transition: 4s;
+}
+.cardMax {
+  height: 0;
+  transition: height 1.2s ease-in;
+  -webkit-transition: height 1.2s ease-in;
+  transition: 1s ease-in;
+}
+.cardMin:hover .cardMax {
+  height: auto;
+}
+
+.date-span {
+  color: #1c1b1bf0;
+  margin-right: 0;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+}
+
+.title-span {
+  font-weight: bold;
+  color: #1c1b1bf0;
+  margin-left: 0;
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+}
+</style>
