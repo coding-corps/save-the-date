@@ -330,12 +330,15 @@ border: 5px solid #555;
 </div>
 
 <br/>
-<center> <h1>Congratulations!!</h1></center>
+<center> <h1>Congratulations, you're a Vue.Js Developer!!</h1></center>
 
-You have now created your first vue web application using Vue.js and the vue CLI!
-The created code base is now available for editing you can also leave the server running to monitor your code changes live in the browser.
+Now that you've built your first Vue web application, you should have a basic understanding of how quickly and easily. you can get started with vue.js.
+
+In future posts We'll delve deeper into not only Vue's other capabilities, components, and features but many other development platforms and tools as i continue along the path of becoming a full stack developer.
+<br/>
 
 <br/>
+
 <style>
  pre {    
     font-size: 15px;
