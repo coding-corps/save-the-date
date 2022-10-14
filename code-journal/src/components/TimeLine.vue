@@ -17,15 +17,15 @@
         <v-card class="cardMin" style="padding: 15px">
           <v-img
             contain
-            height="250px"
+            style="max-height: 300px; margin-bottom: 20px"
             width="100%"
             :src="require(`../assets/${item.img}`)"
           >
-            <span class="title-span">
-              <h4>{{ item.title }}</h4>
-            </span>
-            <span class="date-span"> {{ item.date }} </span>
           </v-img>
+          <span class="title-span">
+            <h4>{{ item.title }}</h4>
+          </span>
+          <span class="date-span"> {{ item.date }} </span>
           <div class="cardMax">
             <v-card-text class="white text--primary">
               <p>{{ item.summary }}</p>
@@ -119,7 +119,7 @@ export default {
   margin-right: 0;
   position: absolute;
   bottom: 2px;
-  right: 2px;
+  right: 5%;
 }
 
 .title-span {
@@ -128,6 +128,13 @@ export default {
   margin-left: 0;
   position: absolute;
   bottom: 2px;
-  left: 2px;
+  left: 5%;
+}
+
+.cardMin:hover .title-span {
+  position: initial;
+}
+.cardMin:hover .date-span {
+  position: initial;
 }
 </style>
