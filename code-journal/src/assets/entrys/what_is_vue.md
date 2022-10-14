@@ -332,9 +332,10 @@ border: 5px solid #555;
 <br/>
 <center> <h1>Congratulations, you're a Vue.Js Developer!!</h1></center>
 
-Now that you've built your first Vue web application, you should have a basic understanding of how quickly and easily. you can get started with vue.js.
+Now that you've built your first Vue web application, you should have a basic understanding of how quickly and easily you can get started with vue.js.
 
-In future posts We'll delve deeper into not only Vue's other capabilities, components, and features but many other development platforms and tools as i continue along the path of becoming a full stack developer.
+In future posts We'll delve deeper into not only Vue's other features and components, but many other development platforms and tools as i continue along the path of becoming a full stack developer.
+
 <br/>
 
 <br/>
