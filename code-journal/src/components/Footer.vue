@@ -9,7 +9,9 @@
       <v-card-text class="white--text">
         Copyright &copy;
         {{ new Date().getFullYear() }} All Rights Reserved by —
-        <strong>Kevin Christopher</strong>
+        <a href="https://www.linkedin.com/in/kevin-christopher-7537007a/"
+          >Kevin Christopher</a
+        >
       </v-card-text>
     </v-col>
   </v-footer>
