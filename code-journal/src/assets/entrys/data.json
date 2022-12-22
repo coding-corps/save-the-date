@@ -12,5 +12,19 @@
         "color": "#000000de",
         "icon": "mdi-code-tags",
         "date": "14/10/2022"
+    },
+    "ae79e3a5-3597-44b1-ab4d-2575eabf423d": {
+        "id": "ae79e3a5-3597-44b1-ab4d-2575eabf423d",
+        "hot": true,
+        "img": "images/vue_components/header.png",
+        "doc": "vue_components.md",
+        "summary": "Vue.js is a popular JavaScript framework for building interactive user interfaces, and one of its key features is the ability to create reusable components. In this article, we'll explore what Vue.js components are, how they work, and some of the benefits and drawbacks of using them in your projects.",
+        "title": "VUE COMPONENTS",
+        "tags": [
+            "vue"
+        ],
+        "color": "#000000de",
+        "icon": "mdi-code-tags",
+        "date": "21/12/2022"
     }
 }
