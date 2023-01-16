@@ -1,6 +1,6 @@
 /*
   Liebe Template
-  Summer Color Scheme
+  fall Color Scheme
  
 */
 /*________  Light Red  ________  */
@@ -32,7 +32,7 @@
 .label.default,
 .btn-radio.active, .btn-radio:active,
 .side-label:after
-{background-color: #652e2e;}
+{background-color: #AD2831;}
 
 .media-heading small,
 .smaller.social-media a i,
@@ -49,7 +49,7 @@ ul.custom li,
 .nav .open>a:hover,
 .owl-next i:hover,
 .owl-prev i:hover
-{color: #FF7F78;}
+{color: #800E13;}
 
 .comment,
 .small-heading,
@@ -66,7 +66,7 @@ ul.custom li,
 .table>thead>tr>td,
 .table>thead>tr>th,
 .blog-latest img
-{border-color: #FF7F78;}
+{border-color: #ea0000;}
 
 
 /*________  Dark Orange ________  */
@@ -91,7 +91,7 @@ label,
 .navbar-custom ul.nav li a:hover,
 .navbar-custom .nav > .active > a,
 h1
-{color: #7b2424;}
+{color: #38040E;}
 
 a.list-group-item:focus,
 a.list-group-item:hover,
@@ -124,19 +124,19 @@ button.list-group-item:hover,
 .panel-heading a,
 .panel-heading a:hover,
 ul.breadcrumb
-{background-color: #7b3e24;}
+{background-color: #ea0000;}
 
 .elements h5,
 .open>.dropdown-toggle.btn-default:focus,
 .open>.dropdown-toggle.btn-default:hover,
 .form-control:focus,
 select.form-control 
-{border-color: #7b3e24;}
+{border-color: #ea0000;}
 
 .slideshow-image,
 .jumbotron,
 .navbar-custom
-{box-shadow:inset 0 0 0 1000px rgba(172, 90, 61, 0.52);}
+{box-shadow:inset 0 0 0 1000px #800E13;}
 
 /*________  Light Orange ________  */
 
@@ -156,7 +156,7 @@ nav.navbar.shrink,
 .dropdown-menu,
 .option-input:hover,
 footer 
-{background-color: #f08b67;}
+{background-color: #800E13;}
 
 .form-control,
 select.form-control,
@@ -174,7 +174,7 @@ blockquote:before,
 .breadcrumb>.active,
 .breadcrumb a:hover,
 .breadcrumb a:focus
-{color: #f08b67;}
+{color: #AD2831;}
 
 /*________  Light Yellow  ________  */
 
@@ -198,10 +198,14 @@ body,
 #elements h5.sub-header,
 .comment,
 .table-hover>tbody>tr:hover 
-{background-color: #34343434;}
+{background-color: #f9dbbd;}
+
+.polaroid-item
+    {background-color: floralwhite !important;}
+ 
 
 .nav.nav-tabs > li > a 
-{outline-color: #313131;}
+{outline-color: #00ff1e;}
 
 /*________  Ilustrations  ________  */
 

@@ -41,7 +41,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     font-weight: 400;
-    color: #8e8d8d;
+    color: #000000;
     overflow-x: hidden!important;
     -webkit-font-smoothing: antialiased;
     font-family: 'Lora', serif;
@@ -2121,10 +2121,10 @@ button.list-group-item:hover {
         width: 20px;
     }
     .navbar-collapse::-webkit-scrollbar-track {
-        background-color: lightgray;
+        background-color: rgb(54, 54, 54);
     }
     .navbar-collapse::-webkit-scrollbar-thumb {
-        background-color: darkgray;
+        background-color: rgb(52, 52, 52);
     }
     .navbar-nav {
         margin: 0;
