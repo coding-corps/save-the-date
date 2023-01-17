@@ -63,7 +63,7 @@ h1 {
     line-height: 90px;
     margin-bottom: 20px;
 	letter-spacing:-1px;
-    font-family: 'Lora', serif;
+    font-family: 'Alex Brush', cursive;
 }
 h2 {
     font-size: 50px;
@@ -239,6 +239,7 @@ nav .navbar-brand img {
 nav .navbar-toggle {
     margin: 13px 15px 13px 0;
 }
+ 
 nav a {
     font-size: 16px;
 	letter-spacing:0.3px;
@@ -1892,7 +1893,7 @@ blockquote:before {
 /* Wells - paper */
 
 .well {
-    background: #fff;
+    background: rgb(254, 246, 229);
     padding: 60px 40px;
     z-index: 1;
 }
@@ -1998,7 +1999,7 @@ blockquote:before {
 }
 .sidebar-header {
 	border-bottom: 1px dotted;
-    color: #fff;
+    color: #AD2831;
     margin-bottom: 20px;
     padding: 6px;
     text-align: center;

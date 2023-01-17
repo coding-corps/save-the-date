@@ -1,6 +1,5 @@
 $(document).ready(function () {
   $("#submit_rsvp").click(function () {
-    console.log("fuckkkk");
     var proceed = true;
     //simple validation at client's end
     //loop through each field and we simply change border color to red for invalid fields

@@ -201,7 +201,7 @@ body,
 {background-color: #f9dbbd;}
 
 .polaroid-item
-    {background-color: floralwhite !important;}
+    {background-color: whitesmoke !important;}
  
 
 .nav.nav-tabs > li > a 
@@ -246,8 +246,8 @@ body,
 }
 
 .text-ornament {
-    background-image: url(../img/ornaments/summer/bgname.png);
+    background-image: url(../img/ornaments/fall/bgname.png);
 }
 .btn {
-   	background-image: url(../img/ornaments/summer/btn.png);
-}
+   	background-image: url(../img/ornaments/fall/btn.png);
+    }
