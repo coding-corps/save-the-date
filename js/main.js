@@ -17,7 +17,7 @@ $(document).ready(function () {
       regexpMatchFormat:
         "([0-9][0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})",
       regexpReplaceWith:
-        " <div class='count'> $1<div class='displayformat'>Days</div></div> <div class='count'> $2<div class='displayformat'>Hours</div></div> <div class='count'> $3<div class='displayformat'>Minutes</div></div> <div class='count'> $4<div class='displayformat'>Seconds</div></div>",
+        " <div class='count'> $1<div class='displayformat'>Days</div></div> <div class='count'> $2<div class='displayformat'>Hours</div></div> <div class='count'> $3<div class='displayformat'>Minutes</div></div> <div class='count'> $4<div class='displayformat'>Seconds</div></div>"
     });
   });
 
@@ -29,7 +29,7 @@ $(document).ready(function () {
       .stop()
       .animate(
         {
-          scrollTop: $($anchor.attr("href")).offset().top,
+          scrollTop: $($anchor.attr("href")).offset().top
         },
         2500,
         "easeInOutExpo"
@@ -59,19 +59,19 @@ $(document).ready(function () {
     nav: true,
     navText: [
       "<i class='fa fa-chevron-left'></i>",
-      "<i class='fa fa-chevron-right'></i>",
+      "<i class='fa fa-chevron-right'></i>"
     ],
     responsive: {
       1: {
-        items: 1,
+        items: 1
       },
       600: {
-        items: 2,
+        items: 2
       },
       1000: {
-        items: 3,
-      },
-    },
+        items: 3
+      }
+    }
   });
 
   $("#owl-attendants1,#owl-attendants2").owlCarousel({
@@ -82,19 +82,19 @@ $(document).ready(function () {
     margin: 20,
     navText: [
       "<i class='fa fa-chevron-left'></i>",
-      "<i class='fa fa-chevron-right'></i>",
+      "<i class='fa fa-chevron-right'></i>"
     ],
     responsive: {
       1: {
-        items: 1,
+        items: 1
       },
       600: {
-        items: 2,
+        items: 2
       },
       991: {
-        items: 3,
-      },
-    },
+        items: 3
+      }
+    }
   });
 }); // end document ready
 
@@ -126,7 +126,7 @@ $(window).load(function () {
   // Pretty Photo
 
   $("a[data-gal^='prettyPhoto']").prettyPhoto({
-    hook: "data-gal",
+    hook: "data-gal"
   });
   ({
     animation_speed: "normal",
@@ -134,7 +134,7 @@ $(window).load(function () {
     show_title: true,
     allow_resize: true,
     counter_separator_label: "/",
-    theme: "light_square",
+    theme: "light_square"
     /* light_rounded / dark_rounded / light_square / dark_square / facebook */
   });
 
@@ -147,12 +147,12 @@ $(window).load(function () {
       duration: 750,
       easing: "linear",
       queue: false,
-      layoutMode: "masonry",
-    },
+      layoutMode: "masonry"
+    }
   });
   $(window).smartresize(function () {
     $container.isotope({
-      columnWidth: ".col-sm-3",
+      columnWidth: ".col-sm-3"
     });
   });
 
@@ -160,7 +160,7 @@ $(window).load(function () {
   skrollr.init({
     smoothScrolling: true,
     smoothScrollingDuration: 1000,
-    forceHeight: false,
+    forceHeight: false
   });
 
   // disable skrollr if using handheld device
@@ -184,8 +184,8 @@ $(window).load(function () {
       animationOptions: {
         duration: 750,
         easing: "linear",
-        queue: false,
-      },
+        queue: false
+      }
     });
     return false;
   });
