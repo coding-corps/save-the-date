@@ -212,29 +212,42 @@ i {
 }
 /* Shrink navbar on scroll  */
 
-nav .navbar-brand img {
-    max-height: fit-content!important;
+nav {
+    width: 100%;
 }
+
 nav .navbar-toggle {
     margin: 13px 15px 13px 0;
 }
 
+
+nav.navbar {
+   min-height: fit-content;
+}
+
+
+nav.navbar.shrink a {
+    font-size: 100%;
+    padding-bottom: 20px !important;
+    padding-top: 20px !important;
+}
 nav a {
-    font-size: 20px;
-	letter-spacing:0.3px;
+    font-size: 25px;
+	letter-spacing:3px;
 	font-family: Montserrat;
     padding-bottom: 20px !important;
     padding-top: 20px !important;
 }
 nav.navbar.shrink {    
     max-height: fit-content;
-    border-bottom: 5px solid #fff;
 }
 nav.navbar.shrink .navbar-brand img {
-    max-width: 120px;
+    max-width: 4%;
+position: relitive;
+top: -50%;
 }
 nav.navbar.shrink a {
-    font-size: 90%;
+    font-size: 100%;
     padding-bottom: 20px !important;
     padding-top: 20px !important;
 }
@@ -246,6 +259,17 @@ nav.navbar.shrink .navbar-toggle {
 nav.navbar.shrink img{
         max-height: 90px;
 }
+
+
+.kevbar ul {
+    list-style: none!important;
+    text-align: center!important;
+ }
+ 
+ .kevbar ul li {
+    display: inline-block!important;
+ }
+
 .navbar-custom .navbar-nav>li>a {
     color: #fff;
     padding: 15px;
@@ -308,12 +332,15 @@ nav.navbar.shrink ul.dropdown-menu>li>a {
 .navbar-brand {
     padding: 0px;
 }
+
+
+
 .navbar-brand-centered img {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    max-width: 120px;
+    max-width: 100px;
     right: 0;
     margin: auto;
     padding-top: 2%;
@@ -2039,6 +2066,10 @@ button.list-group-item:hover {
 	.polaroids.owl-carousel .owl-stage-outer {
 		overflow: visible;
 	}
+
+nav.navbar.shrink img{
+    max-height: 90px;
+}
 }
 /************ max width 1200px *************/
 
@@ -2116,7 +2147,9 @@ button.list-group-item:hover {
     .navbar-collapse::-webkit-scrollbar-thumb {
         background-color: rgb(52, 52, 52);
     }
+
     .navbar-right {
+
         line-height: 0px;
     }
 
@@ -2179,6 +2212,7 @@ button.list-group-item:hover {
 
 @media (max-width: 767px) {
 
+
     /* Jumbotron */
 
     .jumbotron {
@@ -2219,7 +2253,7 @@ button.list-group-item:hover {
 /************ max width 480px *************/
 
 @media (max-width: 480px) {
-
+ 
 
     /* Jumbotron */
 
@@ -2433,7 +2467,8 @@ button.list-group-item:hover {
     .table tr {
         display: block;
     }
-}
+
+    }
 
 .top {
     position: absolute;
