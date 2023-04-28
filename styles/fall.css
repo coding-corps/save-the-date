@@ -264,16 +264,6 @@ background-image: url(../img/bg.jpeg)}
     border-color: #AD2831!important;
 }
 
-.header-logo{
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    margin: auto;
-
- position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-}
 
 .arrows {
  max-width: 10%;

@@ -229,7 +229,7 @@ jQuery.extend(jQuery.easing, {
     return (
       jQuery.easing.easeOutBounce(e, f * 2 - g, 0, h, g) * 0.5 + h * 0.5 + a
     );
-  },
+  }
 });
 
 /** Scroll to **/
@@ -240,7 +240,7 @@ jQuery.extend(jQuery.easing, {
   h.defaults = {
     axis: "xy",
     duration: parseFloat($.fn.jquery) >= 1.3 ? 0 : 1,
-    limit: true,
+    limit: true
   };
   h.window = function (a) {
     return $(window)._scrollable();
@@ -254,7 +254,7 @@ jQuery.extend(jQuery.easing, {
             "iframe",
             "#document",
             "html",
-            "body",
+            "body"
           ]) != -1;
       if (!isWin) return a;
       var b = (a.contentWindow || a).document || a.ownerDocument || a;
@@ -412,7 +412,7 @@ jQuery.extend(jQuery.easing, {
       "transition",
       "WebkitTransition",
       "MozTransition",
-      "OTransition",
+      "OTransition"
     ])[1];
   }
   function i() {
@@ -421,7 +421,7 @@ jQuery.extend(jQuery.easing, {
       "WebkitTransform",
       "MozTransform",
       "OTransform",
-      "msTransform",
+      "msTransform"
     ])[0];
   }
   function j() {
@@ -430,7 +430,7 @@ jQuery.extend(jQuery.easing, {
       "webkitPerspective",
       "MozPerspective",
       "OPerspective",
-      "MsPerspective",
+      "MsPerspective"
     ])[0];
   }
   function k() {
@@ -453,14 +453,14 @@ jQuery.extend(jQuery.easing, {
     startTime: 0,
     endTime: 0,
     updatedX: 0,
-    targetEl: null,
+    targetEl: null
   }),
     (n = {
       isTouch: !1,
       isScrolling: !1,
       isSwiping: !1,
       direction: !1,
-      inMotion: !1,
+      inMotion: !1
     }),
     (o = {
       _onDragStart: null,
@@ -470,7 +470,7 @@ jQuery.extend(jQuery.easing, {
       _resizer: null,
       _responsiveCall: null,
       _goToLoop: null,
-      _checkVisibile: null,
+      _checkVisibile: null
     }),
     (e.Defaults = {
       items: 3,
@@ -503,7 +503,7 @@ jQuery.extend(jQuery.easing, {
       baseClass: "owl-carousel",
       itemClass: "owl-item",
       centerClass: "center",
-      activeClass: "active",
+      activeClass: "active"
     }),
     (e.Width = { Default: "default", Inner: "inner", Outer: "outer" }),
     (e.Plugins = {}),
@@ -512,7 +512,7 @@ jQuery.extend(jQuery.easing, {
         filter: ["width", "items", "settings"],
         run: function (a) {
           a.current = this._items && this._items[this.relative(this._current)];
-        },
+        }
       },
       {
         filter: ["items", "settings"],
@@ -521,7 +521,7 @@ jQuery.extend(jQuery.easing, {
             b = this.$stage.children(".cloned");
           (b.length !== a.length || (!this.settings.loop && a.length > 0)) &&
             (this.$stage.children(".cloned").remove(), (this._clones = []));
-        },
+        }
       },
       {
         filter: ["items", "settings"],
@@ -550,7 +550,7 @@ jQuery.extend(jQuery.easing, {
                 this.$stage.prepend(
                   d[c[c.length - 1]].clone().addClass("cloned")
                 ));
-        },
+        }
       },
       {
         filter: ["width", "items", "settings"],
@@ -577,7 +577,7 @@ jQuery.extend(jQuery.easing, {
                   ? this._items[this.relative(b)].width() + this.settings.margin
                   : e * a) * d),
               this._coordinates.push(f);
-        },
+        }
       },
       {
         filter: ["width", "items", "settings"],
@@ -590,14 +590,12 @@ jQuery.extend(jQuery.easing, {
                 Math.abs(this._coordinates[this._coordinates.length - 1]) +
                 2 * this.settings.stagePadding,
               "padding-left": this.settings.stagePadding || "",
-              "padding-right": this.settings.stagePadding || "",
+              "padding-right": this.settings.stagePadding || ""
             };
           if (
             (this.$stage.css(e),
             (e = {
-              width: this.settings.autoWidth
-                ? "auto"
-                : d - this.settings.margin,
+              width: this.settings.autoWidth ? "auto" : d - this.settings.margin
             }),
             (e[this.settings.rtl ? "margin-left" : "margin-right"] =
               this.settings.margin),
@@ -613,19 +611,19 @@ jQuery.extend(jQuery.easing, {
                 this.settings.margin),
                 this.$stage.children().eq(b).css(e);
           else this.$stage.children().css(e);
-        },
+        }
       },
       {
         filter: ["width", "items", "settings"],
         run: function (a) {
           a.current && this.reset(this.$stage.children().index(a.current));
-        },
+        }
       },
       {
         filter: ["position"],
         run: function () {
           this.animate(this.coordinates(this._current));
-        },
+        }
       },
       {
         filter: ["width", "position", "items", "settings"],
@@ -659,8 +657,8 @@ jQuery.extend(jQuery.easing, {
                 .children()
                 .eq(this.current())
                 .addClass(this.settings.centerClass));
-        },
-      },
+        }
+      }
     ]),
     (e.prototype.initialize = function () {
       if (
@@ -721,7 +719,7 @@ jQuery.extend(jQuery.easing, {
           (this.settings = e),
           this.invalidate("settings"),
           this.trigger("changed", {
-            property: { name: "settings", value: this.settings },
+            property: { name: "settings", value: this.settings }
           }));
     }),
     (e.prototype.optionsLogic = function () {
@@ -1053,7 +1051,7 @@ jQuery.extend(jQuery.easing, {
         this.support3d
           ? this.$stage.css({
               transform: "translate3d(" + b + "px,0px, 0px)",
-              transition: this.speed() / 1e3 + "s",
+              transition: this.speed() / 1e3 + "s"
             })
           : this.state.isTouch
           ? this.$stage.css({ left: b + "px" })
@@ -1071,13 +1069,13 @@ jQuery.extend(jQuery.easing, {
       if (0 === this._items.length) return d;
       if (((a = this.normalize(a)), this._current !== a)) {
         var b = this.trigger("change", {
-          property: { name: "position", value: a },
+          property: { name: "position", value: a }
         });
         b.data !== d && (a = this.normalize(b.data)),
           (this._current = a),
           this.invalidate("position"),
           this.trigger("changed", {
-            property: { name: "position", value: this._current },
+            property: { name: "position", value: this._current }
           });
       }
       return this._current;
@@ -1324,7 +1322,7 @@ jQuery.extend(jQuery.easing, {
           refresh: this.refresh,
           replace: this.replace,
           add: this.add,
-          remove: this.remove,
+          remove: this.remove
         },
         a.proxy(function (a, c) {
           this.$element.on(a + ".owl.carousel", b(c, a + ".owl.carousel"));
@@ -1461,7 +1459,7 @@ jQuery.extend(jQuery.easing, {
           "transitionend",
           "webkitTransitionEnd",
           "transitionend",
-          "oTransitionEnd",
+          "oTransitionEnd"
         ];
         (this.transitionEndVendor = a[h()]),
           (this.vendorName = this.transformVendor.replace(/Transform/i, "")),
@@ -1509,7 +1507,7 @@ jQuery.extend(jQuery.easing, {
               )
                 this.load(g / 2 + this._core.relative(f)),
                   g && a.each(this._core.clones(this._core.relative(f++)), h);
-          }, this),
+          }, this)
         }),
         (this._core.options = a.extend({}, c.Defaults, this._core.options)),
         this._core.$element.on(this._handlers);
@@ -1546,7 +1544,7 @@ jQuery.extend(jQuery.easing, {
                     (e.onload = a.proxy(function () {
                       f.css({
                         "background-image": "url(" + g + ")",
-                        opacity: "1",
+                        opacity: "1"
                       }),
                         this._core.trigger(
                           "loaded",
@@ -1584,7 +1582,7 @@ jQuery.extend(jQuery.easing, {
               a.element.closest("." + this._core.settings.itemClass) ===
                 this._core.$stage.children().eq(this._core.current()) &&
               this.update();
-          }, this),
+          }, this)
         }),
         (this._core.options = a.extend({}, b.Defaults, this._core.options)),
         this._core.$element.on(this._handlers);
@@ -1624,7 +1622,7 @@ jQuery.extend(jQuery.easing, {
           "prepared.owl.carousel": a.proxy(function (b) {
             var c = a(b.content).find(".owl-video");
             c.length && (c.css("display", "none"), this.fetch(c, a(b.content)));
-          }, this),
+          }, this)
         }),
         (this._core.options = a.extend({}, d.Defaults, this._core.options)),
         this._core.$element.on(this._handlers),
@@ -1705,7 +1703,7 @@ jQuery.extend(jQuery.easing, {
                     dataType: "jsonp",
                     success: function (a) {
                       (f = a[0].thumbnail_large), l(f);
-                    },
+                    }
                   }))
         );
       }),
@@ -1805,7 +1803,7 @@ jQuery.extend(jQuery.easing, {
             this.swapping &&
               (this.core.options.animateOut || this.core.options.animateIn) &&
               this.swap();
-          }, this),
+          }, this)
         }),
         this.core.$element.on(this.handlers);
     };
@@ -1880,7 +1878,7 @@ jQuery.extend(jQuery.easing, {
           }, this),
           "mouseleave.owl.autoplay": a.proxy(function () {
             this.core.settings.autoplayHoverPause && this.autoplay();
-          }, this),
+          }, this)
         }),
         this.core.$element.on(this.handlers);
     };
@@ -1888,7 +1886,7 @@ jQuery.extend(jQuery.easing, {
       autoplay: !1,
       autoplayTimeout: 5e3,
       autoplayHoverPause: !1,
-      autoplaySpeed: !1,
+      autoplaySpeed: !1
     }),
       (d.prototype.autoplay = function () {
         this.core.settings.autoplay && !this.core.state.videoPlay
@@ -1939,7 +1937,7 @@ jQuery.extend(jQuery.easing, {
         (this._overrides = {
           next: this._core.next,
           prev: this._core.prev,
-          to: this._core.to,
+          to: this._core.to
         }),
         (this._handlers = {
           "prepared.owl.carousel": a.proxy(function (b) {
@@ -1995,7 +1993,7 @@ jQuery.extend(jQuery.easing, {
               this.update(),
               this.draw(),
               this._core.trigger("refreshed", null, "navigation");
-          }, this),
+          }, this)
         }),
         (this._core.options = a.extend({}, b.Defaults, this._core.options)),
         this.$element.on(this._handlers);
@@ -2017,7 +2015,7 @@ jQuery.extend(jQuery.easing, {
       dotData: !1,
       dotsSpeed: !1,
       dotsContainer: !1,
-      controlsClass: "owl-controls",
+      controlsClass: "owl-controls"
     }),
       (b.prototype.initialize = function () {
         var b,
@@ -2028,7 +2026,7 @@ jQuery.extend(jQuery.easing, {
             a("<div>")
               .addClass(d.dotClass)
               .append(a("<span>"))
-              .prop("outerHTML"),
+              .prop("outerHTML")
           ]),
           (d.navContainer && d.dotsContainer) ||
             (this._controls.$container = a("<div>")
@@ -2159,7 +2157,7 @@ jQuery.extend(jQuery.easing, {
           count: this._pages.length,
           size:
             c &&
-            (c.center || c.autoWidth || c.dotData ? 1 : c.dotsEach || c.items),
+            (c.center || c.autoWidth || c.dotData ? 1 : c.dotsEach || c.items)
         };
       }),
       (b.prototype.current = function () {
@@ -2221,7 +2219,7 @@ jQuery.extend(jQuery.easing, {
               .andSelf("[data-hash]")
               .attr("data-hash");
             this._hashes[c] = b.content;
-          }, this),
+          }, this)
         }),
         (this._core.options = a.extend({}, c.Defaults, this._core.options)),
         this.$element.on(this._handlers),
@@ -2292,7 +2290,7 @@ jQuery.extend(jQuery.easing, {
             v / 2 - a["containerWidth"] / 2 < 0
               ? 0
               : v / 2 - a["containerWidth"] / 2,
-          width: a["containerWidth"],
+          width: a["containerWidth"]
         },
         settings.animation_speed,
         function () {
@@ -2366,7 +2364,7 @@ jQuery.extend(jQuery.easing, {
         containerWidth: Math.floor(p) + settings.horizontal_padding * 2,
         contentHeight: Math.floor(l),
         contentWidth: Math.floor(c),
-        resized: resized,
+        resized: resized
       };
     }
     function E(t, n) {
@@ -2437,7 +2435,7 @@ jQuery.extend(jQuery.easing, {
         if (contentHeight > d) return;
         $pp_pic_holder.css({
           top: projectedTop,
-          left: v / 2 + scroll_pos["scrollLeft"] - contentwidth / 2,
+          left: v / 2 + scroll_pos["scrollLeft"] - contentwidth / 2
         });
       }
     }
@@ -2450,12 +2448,12 @@ jQuery.extend(jQuery.easing, {
       ) {
         return {
           scrollTop: document.documentElement.scrollTop,
-          scrollLeft: document.documentElement.scrollLeft,
+          scrollLeft: document.documentElement.scrollLeft
         };
       } else if (document.body) {
         return {
           scrollTop: document.body.scrollTop,
-          scrollLeft: document.body.scrollLeft,
+          scrollLeft: document.body.scrollLeft
         };
       }
     }
@@ -2583,7 +2581,7 @@ jQuery.extend(jQuery.easing, {
         .css({
           opacity: 0,
           height: e(document).height(),
-          width: e(window).width(),
+          width: e(window).width()
         })
         .bind("click", function () {
           if (!settings.modal) e.prettyPhoto.close();
@@ -2663,8 +2661,7 @@ jQuery.extend(jQuery.easing, {
           '<iframe src ="{path}" width="{width}" height="{height}" frameborder="no"></iframe>',
         inline_markup: '<div class="pp_inline">{content}</div>',
         custom_markup: "",
-        social_tools:
-          '<div class="twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div><div class="facebook"><iframe src="//www.facebook.com/plugins/like.php?locale=en_US&href={location_href}&layout=button_count&show_faces=true&width=500&action=like&font&colorscheme=light&height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:23px;" allowTransparency="true"></iframe></div>',
+        social_tools: ""
       },
       s
     );
@@ -3115,7 +3112,7 @@ var pp_alreadyInitialized = false;
       },
       csstransitions: function () {
         return !!u;
-      },
+      }
     };
   if (o) for (e in c) o.hasOwnProperty(e) || o.addTest(e, c[e]);
   else {
@@ -3133,7 +3130,7 @@ var pp_alreadyInitialized = false;
             },
             scale: function (t) {
               return "scale3d(" + t + ", " + t + ", 1) ";
-            },
+            }
           }
         : {
             translate: function (t) {
@@ -3141,7 +3138,7 @@ var pp_alreadyInitialized = false;
             },
             scale: function (t) {
               return "scale(" + t + ") ";
-            },
+            }
           },
       p = function (t, s, e) {
         var n,
@@ -3164,7 +3161,7 @@ var pp_alreadyInitialized = false;
         get: function (t, s) {
           var e = i.data(t, "isoTransform");
           return e && e.scale ? e.scale : 1;
-        },
+        }
       }),
       (i.fx.step.scale = function (t) {
         i.cssHooks.scale.set(t.elem, t.now + t.unit);
@@ -3177,7 +3174,7 @@ var pp_alreadyInitialized = false;
         get: function (t, s) {
           var e = i.data(t, "isoTransform");
           return e && e.translate ? e.translate : [0, 0];
-        },
+        }
       });
   }
   var y, g;
@@ -3186,7 +3183,7 @@ var pp_alreadyInitialized = false;
       WebkitTransitionProperty: "webkitTransitionEnd",
       MozTransitionProperty: "transitionend",
       OTransitionProperty: "oTransitionEnd otransitionend",
-      transitionProperty: "transitionend",
+      transitionProperty: "transitionend"
     }[u]),
     (g = h("transitionDuration")));
   var v,
@@ -3210,7 +3207,7 @@ var pp_alreadyInitialized = false;
           },
           "execAsap" === i ? 0 : 100
         ));
-    },
+    }
   }),
     (i.fn.smartresize = function (t) {
       return t
@@ -3237,7 +3234,7 @@ var pp_alreadyInitialized = false;
     sortAscending: !0,
     resizesContainer: !0,
     transformsEnabled: !0,
-    itemPositionDataEnabled: !1,
+    itemPositionDataEnabled: !1
   }),
     (i.Isotope.prototype = {
       _create: function (t) {
@@ -3259,13 +3256,13 @@ var pp_alreadyInitialized = false;
           },
           random: function () {
             return Math.random();
-          },
+          }
         };
         (this.options.getSortData = i.extend(this.options.getSortData, a)),
           this.reloadItems(),
           (this.offset = {
             left: parseInt(this.element.css("padding-left") || 0, 10),
-            top: parseInt(this.element.css("padding-top") || 0, 10),
+            top: parseInt(this.element.css("padding-top") || 0, 10)
           });
         var h = this;
         setTimeout(function () {
@@ -3668,7 +3665,7 @@ var pp_alreadyInitialized = false;
           height:
             Math.ceil(this.$filteredAtoms.length / this.cellsByRow.cols) *
               this.cellsByRow.rowHeight +
-            this.offset.top,
+            this.offset.top
         };
       },
       _cellsByRowResizeChanged: function () {
@@ -3784,7 +3781,7 @@ var pp_alreadyInitialized = false;
         return {
           width:
             Math.ceil(this.$filteredAtoms.length / this.cellsByColumn.rows) *
-            this.cellsByColumn.columnWidth,
+            this.cellsByColumn.columnWidth
         };
       },
       _cellsByColumnResizeChanged: function () {
@@ -3806,7 +3803,7 @@ var pp_alreadyInitialized = false;
       },
       _straightAcrossResizeChanged: function () {
         return !0;
-      },
+      }
     }),
     (i.fn.imagesLoaded = function (t) {
       function s() {
@@ -3881,7 +3878,7 @@ var pp_alreadyInitialized = false;
       (ka = {
         beforerender: c.beforerender,
         render: c.render,
-        keyframe: c.keyframe,
+        keyframe: c.keyframe
       }),
       (la = c.forceHeight !== !1),
       la && (Ka = c.scale || 1),
@@ -3926,7 +3923,7 @@ var pp_alreadyInitialized = false;
       init: function (a) {
         return ha || new d(a);
       },
-      VERSION: "0.6.30",
+      VERSION: "0.6.30"
     },
     h = Object.prototype.hasOwnProperty,
     i = a.Math,
@@ -3983,7 +3980,7 @@ var pp_alreadyInitialized = false;
                 "-webkit-": "webkit",
                 "-moz-": "Moz",
                 "-ms-": "ms",
-                "-o-": "O",
+                "-o-": "O"
               }[R]))
             : (S = "-" + R.toLowerCase() + "-");
       }
@@ -4051,7 +4048,7 @@ var pp_alreadyInitialized = false;
           b = 91;
         }
         return 1 - i.abs((3 * i.cos(a * b * 1.028)) / b);
-      },
+      }
     };
   (d.prototype.refresh = function (a) {
     var d,
@@ -4084,7 +4081,7 @@ var pp_alreadyInitialized = false;
                     var r = {
                       props: p.value,
                       element: g,
-                      eventType: p.name.replace(L, M),
+                      eventType: p.name.replace(L, M)
                     };
                     i.push(r);
                     var s = q[1];
@@ -4123,7 +4120,7 @@ var pp_alreadyInitialized = false;
               smoothScrolling: j,
               edgeStrategy: k,
               emitEvents: l,
-              lastFrameIndex: -1,
+              lastFrameIndex: -1
             }),
             Ea(g, [o], []);
         }
@@ -4161,7 +4158,7 @@ var pp_alreadyInitialized = false;
           startTime: d,
           endTime: d + f,
           easing: W[b.easing || w],
-          done: b.done,
+          done: b.done
         }),
         oa.topDiff || (oa.done && oa.done.call(ha, !1), (oa = c)),
         ha
@@ -4436,7 +4433,7 @@ var pp_alreadyInitialized = false;
             topDiff: d - Ma,
             targetTop: d,
             startTime: Na,
-            endTime: Na + qa,
+            endTime: Na + qa
           }),
           e <= ra.endTime &&
             ((b = W.sqrt((e - ra.startTime) / qa)),
@@ -5800,7 +5797,7 @@ var pp_alreadyInitialized = false;
       pauseButton: null,
       stopButton: null,
       beforeExpiryTime: null,
-      beforeExpiryTimeFunction: null,
+      beforeExpiryTimeFunction: null
     });
 })(jQuery);
 
@@ -6557,7 +6554,7 @@ var pp_alreadyInitialized = false;
             {
               geometry: r.geometries[o],
               type: "Feature",
-              properties: t.properties,
+              properties: t.properties
             },
             i
           );
@@ -6660,7 +6657,7 @@ var pp_alreadyInitialized = false;
       requestFn: si,
       cancelFn: ri,
       requestAnimFrame: f,
-      cancelAnimFrame: g,
+      cancelAnimFrame: g
     });
   (v.extend = function (t) {
     var e = function () {
@@ -6763,7 +6760,7 @@ var pp_alreadyInitialized = false;
       var o = i({}, e, {
         type: t,
         target: this,
-        sourceTarget: (e && e.sourceTarget) || this,
+        sourceTarget: (e && e.sourceTarget) || this
       });
       if (this._events) {
         var s = this._events[t];
@@ -6813,7 +6810,7 @@ var pp_alreadyInitialized = false;
           i({ layer: t.target, propagatedFrom: t.target }, t),
           !0
         );
-    },
+    }
   };
   (hi.addEventListener = hi.on),
     (hi.removeEventListener = hi.clearAllEventListeners = hi.off),
@@ -6900,7 +6897,7 @@ var pp_alreadyInitialized = false;
     },
     toString: function () {
       return "Point(" + a(this.x) + ", " + a(this.y) + ")";
-    },
+    }
   }),
     (P.prototype = {
       extend: function (t) {
@@ -6973,7 +6970,7 @@ var pp_alreadyInitialized = false;
       },
       isValid: function () {
         return !(!this.min || !this.max);
-      },
+      }
     }),
     (T.prototype = {
       extend: function (t) {
@@ -7073,7 +7070,7 @@ var pp_alreadyInitialized = false;
           this.getWest(),
           this.getSouth(),
           this.getEast(),
-          this.getNorth(),
+          this.getNorth()
         ].join(",");
       },
       equals: function (t, i) {
@@ -7086,7 +7083,7 @@ var pp_alreadyInitialized = false;
       },
       isValid: function () {
         return !(!this._southWest || !this._northEast);
-      },
+      }
     }),
     (M.prototype = {
       equals: function (t, i) {
@@ -7113,7 +7110,7 @@ var pp_alreadyInitialized = false;
       },
       clone: function () {
         return new M(this.lat, this.lng, this.alt);
-      },
+      }
     });
   var ci = {
       latLngToPoint: function (t, i) {
@@ -7165,7 +7162,7 @@ var pp_alreadyInitialized = false;
         var s = t.getSouthWest(),
           r = t.getNorthEast();
         return new T(new M(s.lat - n, s.lng - o), new M(r.lat - n, r.lng - o));
-      },
+      }
     },
     _i = i({}, ci, {
       wrapLng: [-180, 180],
@@ -7179,7 +7176,7 @@ var pp_alreadyInitialized = false;
           a = s * s + Math.cos(n) * Math.cos(o) * r * r,
           h = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
         return this.R * h;
-      },
+      }
     }),
     di = {
       R: 6378137,
@@ -7204,7 +7201,7 @@ var pp_alreadyInitialized = false;
       bounds: (function () {
         var t = 6378137 * Math.PI;
         return new P([-t, -t], [t, t]);
-      })(),
+      })()
     };
   Z.prototype = {
     transform: function (t, i) {
@@ -7223,7 +7220,7 @@ var pp_alreadyInitialized = false;
         (i = i || 1),
         new x((t.x / i - this._b) / this._a, (t.y / i - this._d) / this._c)
       );
-    },
+    }
   };
   var pi,
     mi,
@@ -7235,7 +7232,7 @@ var pp_alreadyInitialized = false;
       transformation: (function () {
         var t = 0.5 / (Math.PI * di.R);
         return S(t, 0.5, -t, 0.5);
-      })(),
+      })()
     }),
     yi = i({}, vi, { code: "EPSG:900913" }),
     xi = document.documentElement.style,
@@ -7323,7 +7320,7 @@ var pp_alreadyInitialized = false;
       retina: Ki,
       canvas: Yi,
       svg: Xi,
-      vml: Ji,
+      vml: Ji
     }),
     Qi = Fi ? "MSPointerDown" : "pointerdown",
     te = Fi ? "MSPointerMove" : "pointermove",
@@ -7354,21 +7351,21 @@ var pp_alreadyInitialized = false;
       skipped: nt,
       isExternalTarget: ot,
       addListener: V,
-      removeListener: q,
+      removeListener: q
     }),
     pe = xt([
       "transform",
       "WebkitTransform",
       "OTransform",
       "MozTransform",
-      "msTransform",
+      "msTransform"
     ]),
     me = xt([
       "webkitTransition",
       "transition",
       "OTransition",
       "MozTransition",
-      "msTransition",
+      "msTransition"
     ]),
     fe =
       "webkitTransition" === me || "OTransition" === me
@@ -7387,7 +7384,7 @@ var pp_alreadyInitialized = false;
       "WebkitUserSelect",
       "OUserSelect",
       "MozUserSelect",
-      "msUserSelect",
+      "msUserSelect"
     ]);
     (mi = function () {
       if (ge) {
@@ -7427,7 +7424,7 @@ var pp_alreadyInitialized = false;
       disableImageDrag: bt,
       enableImageDrag: Tt,
       preventOutline: zt,
-      restoreOutline: Mt,
+      restoreOutline: Mt
     }),
     we = ui.extend({
       run: function (t, i, e, n) {
@@ -7464,7 +7461,7 @@ var pp_alreadyInitialized = false;
       },
       _easeOut: function (t) {
         return 1 - Math.pow(1 - t, this._easeOutPower);
-      },
+      }
     }),
     Le = ui.extend({
       options: {
@@ -7483,7 +7480,7 @@ var pp_alreadyInitialized = false;
         transform3DLimit: 8388608,
         zoomSnap: 1,
         zoomDelta: 1,
-        trackResize: !0,
+        trackResize: !0
       },
       initialize: function (t, i) {
         (i = l(this, i)),
@@ -7567,7 +7564,7 @@ var pp_alreadyInitialized = false;
           a = this.project(t.getNorthEast(), o);
         return {
           center: this.unproject(r.add(a).divideBy(2).add(s), o),
-          zoom: o,
+          zoom: o
         };
       },
       fitBounds: function (t, i) {
@@ -7579,7 +7576,7 @@ var pp_alreadyInitialized = false;
         return this.fitBounds(
           [
             [-90, -180],
-            [90, 180],
+            [90, 180]
           ],
           t
         );
@@ -7604,7 +7601,7 @@ var pp_alreadyInitialized = false;
             this._panAnim.on(
               {
                 step: this._onPanTransitionStep,
-                end: this._onPanTransitionEnd,
+                end: this._onPanTransitionEnd
               },
               this
             )),
@@ -7761,7 +7758,7 @@ var pp_alreadyInitialized = false;
           return (
             this._handleGeolocationError({
               code: 0,
-              message: "Geolocation not supported.",
+              message: "Geolocation not supported."
             }),
             this
           );
@@ -7799,7 +7796,7 @@ var pp_alreadyInitialized = false;
         this._locateOptions.setView && !this._loaded && this.fitWorld(),
           this.fire("locationerror", {
             code: i,
-            message: "Geolocation error: " + e + ".",
+            message: "Geolocation error: " + e + "."
           });
       },
       _handleGeolocationResponse: function (t) {
@@ -8157,7 +8154,7 @@ var pp_alreadyInitialized = false;
         "dblclick",
         "mouseover",
         "mouseout",
-        "contextmenu",
+        "contextmenu"
       ],
       _fireDOMEvent: function (t, e, n) {
         if ("click" === t.type) {
@@ -8243,7 +8240,7 @@ var pp_alreadyInitialized = false;
           this.project(t.getSouthWest(), i)._subtract(n),
           this.project(t.getNorthWest(), i)._subtract(n),
           this.project(t.getSouthEast(), i)._subtract(n),
-          this.project(t.getNorthEast(), i)._subtract(n),
+          this.project(t.getNorthEast(), i)._subtract(n)
         ]);
       },
       _getCenterLayerPoint: function () {
@@ -8382,7 +8379,7 @@ var pp_alreadyInitialized = false;
           f(function () {
             this._moveEnd(!0);
           }, this));
-      },
+      }
     }),
     Pe = v.extend({
       options: { position: "topright" },
@@ -8431,7 +8428,7 @@ var pp_alreadyInitialized = false;
           t.screenX > 0 &&
           t.screenY > 0 &&
           this._map.getContainer().focus();
-      },
+      }
     }),
     be = function (t) {
       return new Pe(t);
@@ -8465,7 +8462,7 @@ var pp_alreadyInitialized = false;
       ut(this._controlContainer),
         delete this._controlCorners,
         delete this._controlContainer;
-    },
+    }
   });
   var Te = Pe.extend({
       options: {
@@ -8476,7 +8473,7 @@ var pp_alreadyInitialized = false;
         sortLayers: !1,
         sortFunction: function (t, i, e, n) {
           return e < n ? -1 : n < e ? 1 : 0;
-        },
+        }
       },
       initialize: function (t, i, e) {
         l(this, e),
@@ -8693,7 +8690,7 @@ var pp_alreadyInitialized = false;
       },
       _collapse: function () {
         return this.collapse();
-      },
+      }
     }),
     ze = Pe.extend({
       options: {
@@ -8701,7 +8698,7 @@ var pp_alreadyInitialized = false;
         zoomInText: "+",
         zoomInTitle: "Zoom in",
         zoomOutText: "&#x2212;",
-        zoomOutTitle: "Zoom out",
+        zoomOutTitle: "Zoom out"
       },
       onAdd: function (t) {
         var i = "leaflet-control-zoom",
@@ -8770,7 +8767,7 @@ var pp_alreadyInitialized = false;
             pt(this._zoomOutButton, i),
           (this._disabled || t._zoom === t.getMaxZoom()) &&
             pt(this._zoomInButton, i);
-      },
+      }
     });
   Le.mergeOptions({ zoomControl: !0 }),
     Le.addInitHook(function () {
@@ -8782,7 +8779,7 @@ var pp_alreadyInitialized = false;
         position: "bottomleft",
         maxWidth: 100,
         metric: !0,
-        imperial: !0,
+        imperial: !0
       },
       onAdd: function (t) {
         var i = ht("div", "leaflet-control-scale"),
@@ -8845,13 +8842,13 @@ var pp_alreadyInitialized = false;
         return (
           (e = e >= 10 ? 10 : e >= 5 ? 5 : e >= 3 ? 3 : e >= 2 ? 2 : 1), i * e
         );
-      },
+      }
     }),
     Ce = Pe.extend({
       options: {
         position: "bottomright",
         prefix:
-          '<a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>',
+          '<a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>'
       },
       initialize: function (t) {
         l(this, t), (this._attributions = {});
@@ -8891,7 +8888,7 @@ var pp_alreadyInitialized = false;
             t.length && e.push(t.join(", ")),
             (this._container.innerHTML = e.join(" | "));
         }
-      },
+      }
     });
   Le.mergeOptions({ attributionControl: !0 }),
     Le.addInitHook(function () {
@@ -8929,7 +8926,7 @@ var pp_alreadyInitialized = false;
     },
     enabled: function () {
       return !!this._enabled;
-    },
+    }
   });
   Ze.addTo = function (t, i) {
     return t.addHandler(i, this), this;
@@ -8941,13 +8938,13 @@ var pp_alreadyInitialized = false;
       mousedown: "mouseup",
       touchstart: "touchend",
       pointerdown: "touchend",
-      MSPointerDown: "touchend",
+      MSPointerDown: "touchend"
     },
     Ae = {
       mousedown: "mousemove",
       touchstart: "touchmove",
       pointerdown: "touchmove",
-      MSPointerDown: "touchmove",
+      MSPointerDown: "touchmove"
     },
     Be = ui.extend({
       options: { clickTolerance: 3 },
@@ -9043,11 +9040,11 @@ var pp_alreadyInitialized = false;
             this._moving &&
             (g(this._animRequest),
             this.fire("dragend", {
-              distance: this._newPos.distanceTo(this._startPos),
+              distance: this._newPos.distanceTo(this._startPos)
             })),
           (this._moving = !1),
           (Be._dragging = !1);
-      },
+      }
     }),
     Oe = (Object.freeze || Object)({
       simplify: Ct,
@@ -9060,7 +9057,7 @@ var pp_alreadyInitialized = false;
       _getBitCode: Bt,
       _sqClosestPointOnSegment: Rt,
       isFlat: Dt,
-      _flat: Nt,
+      _flat: Nt
     }),
     Re = (Object.freeze || Object)({ clipPolygon: jt }),
     De = {
@@ -9070,7 +9067,7 @@ var pp_alreadyInitialized = false;
       unproject: function (t) {
         return new M(t.y, t.x);
       },
-      bounds: new P([-180, -90], [180, 90]),
+      bounds: new P([-180, -90], [180, 90])
     },
     Ne = {
       R: 6378137,
@@ -9108,12 +9105,12 @@ var pp_alreadyInitialized = false;
             (i = Math.pow((1 - i) / (1 + i), s / 2)),
             (a += u = Math.PI / 2 - 2 * Math.atan(r * i) - a);
         return new M(a * e, (t.x * e) / n);
-      },
+      }
     },
     je = (Object.freeze || Object)({
       LonLat: De,
       Mercator: Ne,
-      SphericalMercator: di,
+      SphericalMercator: di
     }),
     We = i({}, _i, {
       code: "EPSG:3395",
@@ -9121,12 +9118,12 @@ var pp_alreadyInitialized = false;
       transformation: (function () {
         var t = 0.5 / (Math.PI * Ne.R);
         return S(t, 0.5, -t, 0.5);
-      })(),
+      })()
     }),
     He = i({}, _i, {
       code: "EPSG:4326",
       projection: De,
-      transformation: S(1 / 180, 1, -1 / 180, 0.5),
+      transformation: S(1 / 180, 1, -1 / 180, 0.5)
     }),
     Fe = i({}, ci, {
       projection: De,
@@ -9142,7 +9139,7 @@ var pp_alreadyInitialized = false;
           n = i.lat - t.lat;
         return Math.sqrt(e * e + n * n);
       },
-      infinite: !0,
+      infinite: !0
     });
   (ci.Earth = _i),
     (ci.EPSG3395 = We),
@@ -9154,7 +9151,7 @@ var pp_alreadyInitialized = false;
     options: {
       pane: "overlayPane",
       attribution: null,
-      bubblingMouseEvents: !0,
+      bubblingMouseEvents: !0
     },
     addTo: function (t) {
       return t.addLayer(this), this;
@@ -9202,7 +9199,7 @@ var pp_alreadyInitialized = false;
           this.fire("add"),
           i.fire("layeradd", { layer: this });
       }
-    },
+    }
   });
   Le.include({
     addLayer: function (t) {
@@ -9270,7 +9267,7 @@ var pp_alreadyInitialized = false;
           this._layersMinZoom &&
           this.getZoom() < this._layersMinZoom &&
           this.setZoom(this._layersMinZoom);
-    },
+    }
   });
   var Ve = Ue.extend({
       initialize: function (t, i) {
@@ -9327,7 +9324,7 @@ var pp_alreadyInitialized = false;
       },
       getLayerId: function (t) {
         return n(t);
-      },
+      }
     }),
     qe = Ve.extend({
       addLayer: function (t) {
@@ -9361,7 +9358,7 @@ var pp_alreadyInitialized = false;
           t.extend(e.getBounds ? e.getBounds() : e.getLatLng());
         }
         return t;
-      },
+      }
     }),
     Ge = v.extend({
       options: { popupAnchor: [0, 0], tooltipAnchor: [0, 0] },
@@ -9405,7 +9402,7 @@ var pp_alreadyInitialized = false;
       },
       _getIconUrl: function (t) {
         return (Ki && this.options[t + "RetinaUrl"]) || this.options[t + "Url"];
-      },
+      }
     }),
     Ke = Ge.extend({
       options: {
@@ -9416,7 +9413,7 @@ var pp_alreadyInitialized = false;
         iconAnchor: [12, 41],
         popupAnchor: [1, -34],
         tooltipAnchor: [16, -28],
-        shadowSize: [41, 41],
+        shadowSize: [41, 41]
       },
       _getIconUrl: function (t) {
         return (
@@ -9437,7 +9434,7 @@ var pp_alreadyInitialized = false;
                   .replace(/^url\(["']?/, "")
                   .replace(/marker-icon\.png["']?\)$/, ""))
         );
-      },
+      }
     }),
     Ye = Ze.extend({
       initialize: function (t) {
@@ -9452,7 +9449,7 @@ var pp_alreadyInitialized = false;
                 dragstart: this._onDragStart,
                 predrag: this._onPreDrag,
                 drag: this._onDrag,
-                dragend: this._onDragEnd,
+                dragend: this._onDragEnd
               },
               this
             )
@@ -9466,7 +9463,7 @@ var pp_alreadyInitialized = false;
               dragstart: this._onDragStart,
               predrag: this._onPreDrag,
               drag: this._onDrag,
-              dragend: this._onDragEnd,
+              dragend: this._onDragEnd
             },
             this
           )
@@ -9525,7 +9522,7 @@ var pp_alreadyInitialized = false;
         g(this._panRequest),
           delete this._oldLatLng,
           this._marker.fire("moveend").fire("dragend", t);
-      },
+      }
     }),
     Xe = Ue.extend({
       options: {
@@ -9543,7 +9540,7 @@ var pp_alreadyInitialized = false;
         riseOnHover: !1,
         riseOffset: 250,
         pane: "markerPane",
-        bubblingMouseEvents: !1,
+        bubblingMouseEvents: !1
       },
       initialize: function (t, i) {
         l(this, i), (this._latlng = C(t));
@@ -9615,7 +9612,7 @@ var pp_alreadyInitialized = false;
           t.riseOnHover &&
             this.on({
               mouseover: this._bringToFront,
-              mouseout: this._resetZIndex,
+              mouseout: this._resetZIndex
             });
         var o = t.icon.createShadow(this._shadow),
           s = !1;
@@ -9631,7 +9628,7 @@ var pp_alreadyInitialized = false;
         this.options.riseOnHover &&
           this.off({
             mouseover: this._bringToFront,
-            mouseout: this._resetZIndex,
+            mouseout: this._resetZIndex
           }),
           ut(this._icon),
           this.removeInteractiveTarget(this._icon),
@@ -9689,7 +9686,7 @@ var pp_alreadyInitialized = false;
       },
       _getTooltipAnchor: function () {
         return this.options.icon.options.tooltipAnchor;
-      },
+      }
     }),
     Je = Ue.extend({
       options: {
@@ -9706,7 +9703,7 @@ var pp_alreadyInitialized = false;
         fillOpacity: 0.2,
         fillRule: "evenodd",
         interactive: !0,
-        bubblingMouseEvents: !0,
+        bubblingMouseEvents: !0
       },
       beforeAdd: function (t) {
         this._renderer = t.getRenderer(this);
@@ -9744,7 +9741,7 @@ var pp_alreadyInitialized = false;
           (this.options.stroke ? this.options.weight / 2 : 0) +
           this._renderer.options.tolerance
         );
-      },
+      }
     }),
     $e = Je.extend({
       options: { fill: !0, radius: 10 },
@@ -9797,7 +9794,7 @@ var pp_alreadyInitialized = false;
         return (
           t.distanceTo(this._point) <= this._radius + this._clickTolerance()
         );
-      },
+      }
     }),
     Qe = $e.extend({
       initialize: function (t, e, n) {
@@ -9853,7 +9850,7 @@ var pp_alreadyInitialized = false;
             (this._radius = this._point.x - e.latLngToLayerPoint(c).x);
         }
         this._updateBounds();
-      },
+      }
     }),
     tn = Je.extend({
       options: { smoothFactor: 1, noClip: !1 },
@@ -9902,7 +9899,7 @@ var pp_alreadyInitialized = false;
               (r = (n - i) / e),
               this._map.layerPointToLatLng([
                 s.x - r * (s.x - o.x),
-                s.y - r * (s.y - o.y),
+                s.y - r * (s.y - o.y)
               ])
             );
       },
@@ -10005,7 +10002,7 @@ var pp_alreadyInitialized = false;
           for (n = 0, o = (r = (a = this._parts[e]).length) - 1; n < r; o = n++)
             if ((i || 0 !== n) && Zt(t, a[o], a[n]) <= h) return !0;
         return !1;
-      },
+      }
     });
   tn._flat = Nt;
   var en = tn.extend({
@@ -10089,7 +10086,7 @@ var pp_alreadyInitialized = false;
                 t.x < ((n.x - e.x) * (t.y - e.y)) / (n.y - e.y) + e.x &&
                 (u = !u);
         return u || tn.prototype._containsPoint.call(this, t, !0);
-      },
+      }
     }),
     nn = qe.extend({
       initialize: function (t, i) {
@@ -10135,15 +10132,15 @@ var pp_alreadyInitialized = false;
       _setLayerStyle: function (t, i) {
         "function" == typeof i && (i = i(t.feature)),
           t.setStyle && t.setStyle(i);
-      },
+      }
     }),
     on = {
       toGeoJSON: function (t) {
         return qt(this, {
           type: "Point",
-          coordinates: Ut(this.getLatLng(), t),
+          coordinates: Ut(this.getLatLng(), t)
         });
-      },
+      }
     };
   Xe.include(on),
     Qe.include(on),
@@ -10154,9 +10151,9 @@ var pp_alreadyInitialized = false;
           e = Vt(this._latlngs, i ? 1 : 0, !1, t);
         return qt(this, {
           type: (i ? "Multi" : "") + "LineString",
-          coordinates: e,
+          coordinates: e
         });
-      },
+      }
     }),
     en.include({
       toGeoJSON: function (t) {
@@ -10167,7 +10164,7 @@ var pp_alreadyInitialized = false;
           i || (n = [n]),
           qt(this, { type: (e ? "Multi" : "") + "Polygon", coordinates: n })
         );
-      },
+      }
     }),
     Ve.include({
       toMultiPoint: function (t) {
@@ -10202,7 +10199,7 @@ var pp_alreadyInitialized = false;
             ? qt(this, { geometries: n, type: "GeometryCollection" })
             : { type: "FeatureCollection", features: n }
         );
-      },
+      }
     });
   var sn = Kt,
     rn = Ue.extend({
@@ -10213,7 +10210,7 @@ var pp_alreadyInitialized = false;
         crossOrigin: !1,
         errorOverlayUrl: "",
         zIndex: 1,
-        className: "",
+        className: ""
       },
       initialize: function (t, i, e) {
         (this._url = t), (this._bounds = z(i)), l(this, e);
@@ -10314,7 +10311,7 @@ var pp_alreadyInitialized = false;
         this.fire("error");
         var t = this.options.errorOverlayUrl;
         t && this._url !== t && ((this._url = t), (this._image.src = t));
-      },
+      }
     }),
     an = rn.extend({
       options: { autoplay: !0, loop: !0 },
@@ -10345,7 +10342,7 @@ var pp_alreadyInitialized = false;
             (h.src = this._url[a]), i.appendChild(h);
           }
         }
-      },
+      }
     }),
     hn = Ue.extend({
       options: { offset: [0, 7], className: "", pane: "popupPane" },
@@ -10444,7 +10441,7 @@ var pp_alreadyInitialized = false;
       },
       _getAnchor: function () {
         return [0, 0];
-      },
+      }
     }),
     un = hn.extend({
       options: {
@@ -10459,7 +10456,7 @@ var pp_alreadyInitialized = false;
         closeButton: !0,
         autoClose: !0,
         closeOnEscapeKey: !0,
-        className: "",
+        className: ""
       },
       openOn: function (t) {
         return t.openPopup(this), this;
@@ -10576,7 +10573,7 @@ var pp_alreadyInitialized = false;
             ? this._source._getPopupAnchor()
             : [0, 0]
         );
-      },
+      }
     });
   Le.mergeOptions({ closePopupOnClick: !0 }),
     Le.include({
@@ -10599,7 +10596,7 @@ var pp_alreadyInitialized = false;
           t && this.removeLayer(t),
           this
         );
-      },
+      }
     }),
     Ue.include({
       bindPopup: function (t, i) {
@@ -10613,7 +10610,7 @@ var pp_alreadyInitialized = false;
               click: this._openPopup,
               keypress: this._onKeyPress,
               remove: this.closePopup,
-              move: this._movePopup,
+              move: this._movePopup
             }),
             (this._popupHandlersAdded = !0)),
           this
@@ -10626,7 +10623,7 @@ var pp_alreadyInitialized = false;
               click: this._openPopup,
               keypress: this._onKeyPress,
               remove: this.closePopup,
-              move: this._movePopup,
+              move: this._movePopup
             }),
             (this._popupHandlersAdded = !1),
             (this._popup = null)),
@@ -10684,7 +10681,7 @@ var pp_alreadyInitialized = false;
       },
       _onKeyPress: function (t) {
         13 === t.originalEvent.keyCode && this._openPopup(t);
-      },
+      }
     });
   var ln = hn.extend({
     options: {
@@ -10694,7 +10691,7 @@ var pp_alreadyInitialized = false;
       permanent: !1,
       sticky: !1,
       interactive: !1,
-      opacity: 0.9,
+      opacity: 0.9
     },
     onAdd: function (t) {
       hn.prototype.onAdd.call(this, t),
@@ -10769,7 +10766,7 @@ var pp_alreadyInitialized = false;
           ? this._source._getTooltipAnchor()
           : [0, 0]
       );
-    },
+    }
   });
   Le.include({
     openTooltip: function (t, i, e) {
@@ -10781,7 +10778,7 @@ var pp_alreadyInitialized = false;
     },
     closeTooltip: function (t) {
       return t && this.removeLayer(t), this;
-    },
+    }
   }),
     Ue.include({
       bindTooltip: function (t, i) {
@@ -10884,14 +10881,14 @@ var pp_alreadyInitialized = false;
           (e = this._map.containerPointToLayerPoint(i)),
           (n = this._map.layerPointToLatLng(e))),
           this._tooltip.setLatLng(n);
-      },
+      }
     });
   var cn = Ge.extend({
     options: {
       iconSize: [12, 12],
       html: !1,
       bgPos: null,
-      className: "leaflet-div-icon",
+      className: "leaflet-div-icon"
     },
     createIcon: function (t) {
       var i = t && "DIV" === t.tagName ? t : document.createElement("div"),
@@ -10904,7 +10901,7 @@ var pp_alreadyInitialized = false;
     },
     createShadow: function () {
       return null;
-    },
+    }
   });
   Ge.Default = Ke;
   var _n = Ue.extend({
@@ -10923,7 +10920,7 @@ var pp_alreadyInitialized = false;
         noWrap: !1,
         pane: "tilePane",
         className: "",
-        keepBuffer: 2,
+        keepBuffer: 2
       },
       initialize: function (t) {
         l(this, t);
@@ -10977,7 +10974,7 @@ var pp_alreadyInitialized = false;
           viewprereset: this._invalidateAll,
           viewreset: this._resetView,
           zoom: this._resetView,
-          moveend: this._onMoveEnd,
+          moveend: this._onMoveEnd
         };
         return (
           this.options.updateWhenIdle ||
@@ -11203,12 +11200,12 @@ var pp_alreadyInitialized = false;
           (this._wrapX = i.wrapLng &&
             !this.options.noWrap && [
               Math.floor(t.project([0, i.wrapLng[0]], n).x / e.x),
-              Math.ceil(t.project([0, i.wrapLng[1]], n).x / e.y),
+              Math.ceil(t.project([0, i.wrapLng[1]], n).x / e.y)
             ]),
           (this._wrapY = i.wrapLat &&
             !this.options.noWrap && [
               Math.floor(t.project([i.wrapLat[0], 0], n).y / e.x),
-              Math.ceil(t.project([i.wrapLat[1], 0], n).y / e.y),
+              Math.ceil(t.project([i.wrapLat[1], 0], n).y / e.y)
             ]);
       },
       _onMoveEnd: function () {
@@ -11324,7 +11321,7 @@ var pp_alreadyInitialized = false;
           delete this._tiles[t],
           this.fire("tileunload", {
             tile: i.el,
-            coords: this._keyToTileCoords(t),
+            coords: this._keyToTileCoords(t)
           }));
       },
       _initTile: function (t) {
@@ -11390,7 +11387,7 @@ var pp_alreadyInitialized = false;
       _noTilesToLoad: function () {
         for (var t in this._tiles) if (!this._tiles[t].loaded) return !1;
         return !0;
-      },
+      }
     }),
     dn = _n.extend({
       options: {
@@ -11402,7 +11399,7 @@ var pp_alreadyInitialized = false;
         tms: !1,
         zoomReverse: !1,
         detectRetina: !1,
-        crossOrigin: !1,
+        crossOrigin: !1
       },
       initialize: function (t, i) {
         (this._url = t),
@@ -11439,7 +11436,7 @@ var pp_alreadyInitialized = false;
           s: this._getSubdomain(t),
           x: t.x,
           y: t.y,
-          z: this._getZoomForUrl(),
+          z: this._getZoomForUrl()
         };
         if (this._map && !this._map.options.crs.infinite) {
           var n = this._globalTileRange.max.y - t.y;
@@ -11475,7 +11472,7 @@ var pp_alreadyInitialized = false;
             (((i = this._tiles[t].el).onload = r),
             (i.onerror = r),
             i.complete || ((i.src = ni), ut(i), delete this._tiles[t]));
-      },
+      }
     }),
     pn = dn.extend({
       defaultWmsParams: {
@@ -11485,7 +11482,7 @@ var pp_alreadyInitialized = false;
         styles: "",
         format: "image/jpeg",
         transparent: !1,
-        version: "1.1.1",
+        version: "1.1.1"
       },
       options: { crs: null, uppercase: !1 },
       initialize: function (t, e) {
@@ -11523,7 +11520,7 @@ var pp_alreadyInitialized = false;
       },
       setParams: function (t, e) {
         return i(this.wmsParams, t), e || this.redraw(), this;
-      },
+      }
     });
   (dn.WMS = pn),
     (Yt.wms = function (t, i) {
@@ -11550,7 +11547,7 @@ var pp_alreadyInitialized = false;
           viewreset: this._reset,
           zoom: this._onZoom,
           moveend: this._update,
-          zoomend: this._onZoomEnd,
+          zoomend: this._onZoomEnd
         };
         return this._zoomAnimated && (t.zoomanim = this._onAnimZoom), t;
       },
@@ -11586,7 +11583,7 @@ var pp_alreadyInitialized = false;
         (this._bounds = new P(e, e.add(i.multiplyBy(1 + 2 * t)).round())),
           (this._center = this._map.getCenter()),
           (this._zoom = this._map.getZoom());
-      },
+      }
     }),
     fn = mn.extend({
       getEvents: function () {
@@ -11859,7 +11856,7 @@ var pp_alreadyInitialized = false;
           (this._drawFirst.prev = i),
           (this._drawFirst = i),
           this._requestRedraw(t));
-      },
+      }
     }),
     gn = (function () {
       try {
@@ -11950,7 +11947,7 @@ var pp_alreadyInitialized = false;
       },
       _bringToBack: function (t) {
         _t(t._container);
-      },
+      }
     },
     yn = Ji ? gn : E,
     xn = mn.extend({
@@ -12066,7 +12063,7 @@ var pp_alreadyInitialized = false;
       },
       _bringToBack: function (t) {
         _t(t._path);
-      },
+      }
     });
   Ji && xn.include(vn),
     Le.include({
@@ -12092,7 +12089,7 @@ var pp_alreadyInitialized = false;
             (this._paneRenderers[t] = i)),
           i
         );
-      },
+      }
     });
   var wn = en.extend({
     initialize: function (t, i) {
@@ -12106,7 +12103,7 @@ var pp_alreadyInitialized = false;
         (t = z(t)),
         [t.getSouthWest(), t.getNorthWest(), t.getNorthEast(), t.getSouthEast()]
       );
-    },
+    }
   });
   (xn.create = yn),
     (xn.pointsToPath = k),
@@ -12158,7 +12155,7 @@ var pp_alreadyInitialized = false;
             contextmenu: Q,
             mousemove: this._onMouseMove,
             mouseup: this._onMouseUp,
-            keydown: this._onKeyDown,
+            keydown: this._onKeyDown
           },
           this
         );
@@ -12186,7 +12183,7 @@ var pp_alreadyInitialized = false;
             contextmenu: Q,
             mousemove: this._onMouseMove,
             mouseup: this._onMouseUp,
-            keydown: this._onKeyDown,
+            keydown: this._onKeyDown
           },
           this
         );
@@ -12204,7 +12201,7 @@ var pp_alreadyInitialized = false;
     },
     _onKeyDown: function (t) {
       27 === t.keyCode && this._finish();
-    },
+    }
   });
   Le.addInitHook("addHandler", "boxZoom", Ln),
     Le.mergeOptions({ doubleClickZoom: !0 });
@@ -12223,7 +12220,7 @@ var pp_alreadyInitialized = false;
       "center" === i.options.doubleClickZoom
         ? i.setZoom(o)
         : i.setZoomAround(t.containerPoint, o);
-    },
+    }
   });
   Le.addInitHook("addHandler", "doubleClickZoom", Pn),
     Le.mergeOptions({
@@ -12233,7 +12230,7 @@ var pp_alreadyInitialized = false;
       inertiaMaxSpeed: 1 / 0,
       easeLinearity: 0.2,
       worldCopyJump: !1,
-      maxBoundsViscosity: 0,
+      maxBoundsViscosity: 0
     });
   var bn = Ze.extend({
     addHooks: function () {
@@ -12244,7 +12241,7 @@ var pp_alreadyInitialized = false;
             {
               dragstart: this._onDragStart,
               drag: this._onDrag,
-              dragend: this._onDragEnd,
+              dragend: this._onDragEnd
             },
             this
           ),
@@ -12359,12 +12356,12 @@ var pp_alreadyInitialized = false;
                 duration: c,
                 easeLinearity: r,
                 noMoveStart: !0,
-                animate: !0,
+                animate: !0
               });
             }))
           : i.fire("moveend");
       }
-    },
+    }
   });
   Le.addInitHook("addHandler", "dragging", bn),
     Le.mergeOptions({ keyboard: !0, keyboardPanDelta: 80 });
@@ -12375,7 +12372,7 @@ var pp_alreadyInitialized = false;
       down: [40],
       up: [38],
       zoomIn: [187, 107, 61, 171],
-      zoomOut: [189, 109, 54, 173],
+      zoomOut: [189, 109, 54, 173]
     },
     initialize: function (t) {
       (this._map = t),
@@ -12390,7 +12387,7 @@ var pp_alreadyInitialized = false;
           {
             focus: this._onFocus,
             blur: this._onBlur,
-            mousedown: this._onMouseDown,
+            mousedown: this._onMouseDown
           },
           this
         ),
@@ -12403,7 +12400,7 @@ var pp_alreadyInitialized = false;
           {
             focus: this._onFocus,
             blur: this._onBlur,
-            mousedown: this._onMouseDown,
+            mousedown: this._onMouseDown
           },
           this
         ),
@@ -12468,13 +12465,13 @@ var pp_alreadyInitialized = false;
         }
         Q(t);
       }
-    },
+    }
   });
   Le.addInitHook("addHandler", "keyboard", Tn),
     Le.mergeOptions({
       scrollWheelZoom: !0,
       wheelDebounceTime: 40,
-      wheelPxPerZoomLevel: 60,
+      wheelPxPerZoomLevel: 60
     });
   var zn = Ze.extend({
     addHooks: function () {
@@ -12510,7 +12507,7 @@ var pp_alreadyInitialized = false;
           ("center" === t.options.scrollWheelZoom
             ? t.setZoom(i + r)
             : t.setZoomAround(this._lastMousePos, i + r));
-    },
+    }
   });
   Le.addInitHook("addHandler", "scrollWheelZoom", zn),
     Le.mergeOptions({ tap: !0, tapTolerance: 15 });
@@ -12593,7 +12590,7 @@ var pp_alreadyInitialized = false;
           null
         ),
         i.target.dispatchEvent(e);
-    },
+    }
   });
   Vi && !Ui && Le.addInitHook("addHandler", "tap", Mn),
     Le.mergeOptions({ touchZoom: Vi && !zi, bounceAtZoomLimits: !0 });
@@ -12659,7 +12656,7 @@ var pp_alreadyInitialized = false;
           g(this._animRequest);
         var a = e(i._move, i, this._center, this._zoom, {
           pinch: !0,
-          round: !1,
+          round: !1
         });
         (this._animRequest = f(a, this, !0)), $(t);
       }
@@ -12682,7 +12679,7 @@ var pp_alreadyInitialized = false;
                 this._map._limitZoom(this._zoom)
               ))
         : (this._zooming = !1);
-    },
+    }
   });
   Le.addInitHook("addHandler", "touchZoom", Cn),
     (Le.BoxZoom = Ln),
