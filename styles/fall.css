@@ -202,7 +202,12 @@ body,
 background-image: url(../img/bg.jpeg)}
 
 .polaroid-item
-    {background-color: whitesmoke !important;}
+    {background-color: whitesmoke !important;
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+        padding-top: 20px!important;
+
+}
  
 
 .nav.nav-tabs > li > a 
@@ -269,4 +274,11 @@ background-image: url(../img/bg.jpeg)}
  max-width: 10%;
  float: right;
  z-index: 9;
+}
+
+
+.arrow {
+    background-image: url(../img/c.png);
+    width: 250px;
+    height: 250px;
 }
