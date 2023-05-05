@@ -811,6 +811,9 @@ ul.polaroids li {
     font-style: italic;
 }
 /* =========================== Registry ============================ */
+#registry{
+    display: none;
+}
 
 #registry .brand {
     max-width: 30%;
