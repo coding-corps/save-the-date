@@ -2187,8 +2187,37 @@ nav.navbar.shrink img{
     #scroll-effect .well {
         position: relative;
     }
-    #intro .photowall {
-        display: none;
+ 
+    #right-img{
+        max-width: 40%;
+        margin-left:60.33333333%;
+        border: solid 2px #fff!important;
+
+    }
+    #left-img{
+        max-width: 40%;
+        margin-left:0.33333333%;
+        border: solid 2px #fff!important;
+    }
+    .polaroid-item{
+        margin-left: 15%;
+        margin-top: 5%;
+        max-width: 70%;
+        margin-bottom:0.33333333% 
+    }
+
+    #cel-pic{
+        margin-bottom: 100px;
+    }
+
+
+
+    #main-pic {
+        border: solid 5px #fff!important;
+        margin: 10%;
+        margin-left: 15%;
+        padding: 0;
+        max-width: 70%;   
     }
     #intro .italic {
         font-size: 70px;
